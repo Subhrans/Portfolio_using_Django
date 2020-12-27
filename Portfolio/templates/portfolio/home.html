@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+{% endblock %}
+{% block owncss %}
+    <style type="text/css">
+        h1{
+        color:white;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1> Welcome to home page of my portfolio</h1>
+{% endblock %}
