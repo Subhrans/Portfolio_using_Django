@@ -22,6 +22,13 @@
                 <img src="" alt="Myimage">
             </div>
         </section>
+        <section>
+            <form method="POST">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit">
+            </form>
+        </section>
     </main>
 
 {% endblock %}

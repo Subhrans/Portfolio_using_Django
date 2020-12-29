@@ -70,3 +70,10 @@ class MyDetail(models.Model):
     def __str__(self):
         return ("{} "+"{}").format(self.first_name,self.last_name)
 
+
+class subscribe(models.Model):
+    name=models.CharField(max_length=128)
+    email=models.EmailField()
+
+    def __str__(self):
+        return self.name
