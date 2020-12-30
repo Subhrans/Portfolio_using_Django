@@ -22,20 +22,9 @@
                 <img src="" alt="Myimage">
             </div>
         </section>
-        <section>
-            <form method="POST" action="">
-                {% csrf_token %}
-                {{form.non_field_errors}}
-                {% for i in form %}
-                    {{i.label_tag}}
-                    {{i}}
-                    {% for j in i.errors %}
-                        <span class="errorlist">{{j|striptags}}</span>
-                    {% endfor %}
-                {% endfor %}
-                <input type="submit">
-            </form>
-        </section>
+        <!--    Subscribe Area  -->
+        {% include 'portfolio/subscribe.html' %}
+        <!--    End Subscribe Area  -->
     </main>
 
 {% endblock %}
