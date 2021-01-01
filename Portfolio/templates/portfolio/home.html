@@ -14,12 +14,13 @@
 {% block content %}
     {% include 'portfolio/navbar.html' %}
     <main>
+        {% for mydetail in myprofile %}
         <section class="banner-area container-fluid row">
             <div class="col-md-6 col-sm-12">
                 <p class="text-uppercase">Hello There</p>
             </div>
             <div class="col-md-6 col-sm-12">
-                <img src="" alt="Myimage">
+                <img src="{{media_url}}{{mydetail.profile_pic}}" alt="Myimage">
             </div>
         </section>
         <!--    About Area  -->
@@ -28,6 +29,7 @@
         <!--    Subscribe Area  -->
         {% include 'portfolio/subscribe.html' %}
         <!--    End Subscribe Area  -->
+        {% endfor %}
     </main>
 
 {% endblock %}
