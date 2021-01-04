@@ -1,3 +1,9 @@
+@import url("./partials/variables.css");
+@import "./partials/_globals.css";
+html{
+	scroll-behavior: smooth;
+}
+
 .header_area .main-menu .navbar .navbar-brand{
   padding:0 2rem 0 5rem;
   text-shadow: var(--box-shadow);

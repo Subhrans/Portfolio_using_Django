@@ -2,27 +2,38 @@
 {% load static %}
 {% block title %}Home{% endblock %}
 {% block css %}
-    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+
 {% endblock %}
 {% block owncss %}
     <style type="text/css">
-        h1{
-        color:white;
-        }
+
     </style>
 {% endblock %}
 {% block content %}
     {% include 'portfolio/navbar.html' %}
-    <main>
+    <main class="site-main">
         {% for mydetail in myprofile %}
-        <section class="banner-area container-fluid row">
-            <div class="col-md-6 col-sm-12">
-                <p class="text-uppercase">Hello There</p>
+        <section class="site-banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 site-title">
+              <h3 class="title-text">Hey</h3>
+              <h1 class="title-text text-uppercase"> I am {{mydetail}}</h1>
+              <h4 class="title-text text-uppercase">Full Stack Developer</h4>
+              <div class="site-buttons">
+                <div class="d-flex flex-row flex-wrap">
+                  <button type="button" name="button" class="btn button primary-button mr-4 text-uppercase">Hire me</button>
+                  <button type="button" name="button" class="btn button secondary-button text-uppercase">Get CV</button>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 col-sm-12">
-                <img src="{{media_url}}{{mydetail.profile_pic}}" alt="Myimage">
+            <div class="col-lg-6 col-md-6">
+              <img src="/{{media_url}}{{mydetail.profile_pic}}" alt="Myimage" class="img-fluid">
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
         <!--    About Area  -->
         {% include 'portfolio/about.html' %}
         <!--    End About Area  -->
