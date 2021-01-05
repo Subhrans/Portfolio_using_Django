@@ -54,18 +54,24 @@ class Achievment(models.Model):
     certificate_url=models.URLField(null=True,blank=True)
 
 
+class Pics(models.Model):
+    OptionalPic = models.ImageField(default="", upload_to="media/images/")
+
+    def __str__(self):
+        return "{} {}".format(self.OptionalPic)
+
 
 class MyDetail(models.Model):
-    first_name=models.CharField(max_length=20)
-    last_name=models.CharField(max_length=10)
-    tell_about_me_your_self=models.TextField(max_length=500)
-    profile_pic=models.ImageField(default="",upload_to="media/images/")
-    social_site_connection_details=models.ForeignKey(Social_Site_Connection,on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=10)
+    tell_about_me_your_self = models.TextField(max_length=500)
+    profile_pic = models.ImageField(default="", upload_to="media/images/")
+    optional_pic = models.ForeignKey(Pics,on_delete=models.CASCADE)
+    social_site_connection_details = models.ForeignKey(Social_Site_Connection,on_delete=models.CASCADE)
 
-    qualification=models.ForeignKey(Qualification,on_delete=models.CASCADE)
-    projects_detail=models.ForeignKey(Project,on_delete=models.CASCADE)
-    achievment_details=models.ForeignKey(Achievment,on_delete=models.CASCADE)
-
+    qualification = models.ForeignKey(Qualification,on_delete=models.CASCADE)
+    projects_detail = models.ForeignKey(Project,on_delete=models.CASCADE)
+    achievment_details = models.ForeignKey(Achievment,on_delete=models.CASCADE)
 
     def __str__(self):
         return ("{} "+"{}").format(self.first_name,self.last_name)
