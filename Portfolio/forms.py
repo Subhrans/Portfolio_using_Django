@@ -3,14 +3,15 @@ from django.core import validators
 from .models import Subscribe
 
 
-class SubscribeForm(forms.Form):
+class SubscribeForm(forms.ModelForm):
     class Meta:
         model = Subscribe
         fields = ['email']
-        widgets = forms.EmailInput(attrs={'class': 'user-email form-control',
-                                          'id': 'user-email',
-                                          'placeholder': 'Email',
-                                          })
+        widgets = {'email': forms.EmailInput(attrs={'class': 'user-email form-control',
+                                                    'id': 'user-email',
+                                                    'placeholder': 'Email',
+                                                    }),
+                   }
 
     # email = forms.EmailField(label="Email",
     #                          label_suffix="",

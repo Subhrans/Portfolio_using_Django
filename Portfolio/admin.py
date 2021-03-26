@@ -9,6 +9,7 @@ from .models import (MyDetail,
                      Higher_Secondary_Examination,
                      Post_Graduation,
                      Subscribe,
+                    Pics,
 
             )
 # Register your models here.
@@ -17,6 +18,8 @@ admin.site.register(Under_Graduation)
 admin.site.register(Project)
 admin.site.register(Qualification)
 admin.site.register(Achievment)
+admin.site.register(Pics)
+admin.site.register(Subscribe)
 admin.site.register(Social_Site_Connection)
 admin.site.register(Secondary_Examination)
 admin.site.register(Higher_Secondary_Examination)

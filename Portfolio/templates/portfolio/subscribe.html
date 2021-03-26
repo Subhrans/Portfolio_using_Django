@@ -10,13 +10,16 @@
         <div class="d-sm-flex justify-content-center">
             <form class="w-50" action="index.html" method="POST">
                 {% csrf_token %}
-                {{form.non_field_errors}}
-                {% for i in form %}
+                {{subscribe_form.non_field_errors}}
+                {% for i in subscribe_form %}
                 <div class="row d-flex flex-row flex-wrap">
                     <div class="col input-textbox">
                         {{i}}
-                        {{i.label_tag}}
+
                         <!--                  <input type="text" name="mail" class="form-control" placeholder="Email" value="">-->
+                        {% for j in i.errors %}
+                            <span class="errorlist">{{j|striptags}}</span>
+                        {% endfor %}
                     </div>
                     <div class="col subscribe-button">
                         <div class="btn-submit">
@@ -30,21 +33,4 @@
             </form>
         </div>
     </div>
-</section>
-
-
-<section class="subscribe-us-area">
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{subs}}
-        {{form.non_field_errors}}
-        {% for i in form %}
-        {{i.label_tag}}
-        {{i}}
-        {% for j in i.errors %}
-        <span class="errorlist">{{j|striptags}}</span>
-        {% endfor %}
-        {% endfor %}
-        <input type="submit">
-    </form>
 </section>

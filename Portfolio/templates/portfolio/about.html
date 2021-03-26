@@ -1,25 +1,25 @@
 
-    <section class="about-area">
+    <section class="about-area" id="about-area">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="about-image">
-                        <img src="" alt="about-my-image">
+                        <img src="/media/{{mydetail.optional_pic.OptionalPic}}" alt="about-my-image" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 about title">
-                    <h2 class="text-uppercase">
+                    <h2 class="text-uppercase pt-5">
                         <span>Let Me</span>
                         <span>Introduce</span>
                         <span>MySelf</span>
 
                     </h2>
-                    <div class="paragraph">
+                    <div class="paragraph py-4 w-75">
                         <p class="para">
-                            {{mydetail.tell_about_me_your_self|slice:':78'}}
+                            {{mydetail.tell_about_me_your_self|slice:':60'}}
                         </p>
                         <p class="para">
-                            {{mydetail.tell_about_me_your_self|slice:'78:'}}
+                            {{mydetail.tell_about_me_your_self|slice:'60:'}}
                         </p>
                     </div>
                     <button type="button" name="button" id="resume" class="btn button primary-button text-uppercase">

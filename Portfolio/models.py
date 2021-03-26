@@ -83,6 +83,7 @@ class Achievment(models.Model):
 
 class Pics(models.Model):
     OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)
+    alternative_text = models.CharField(max_length=40, default="")
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -91,13 +92,14 @@ class Pics(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.OptionalPic
+        return self.alternative_text
 
 
 class MyDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     tell_about_me_your_self = models.TextField(max_length=500)
     profile_pic = models.ImageField(default="", upload_to="media/images/")
+    alternative_text = models.CharField(max_length=40, default="")
     optional_pic = models.ForeignKey(Pics, on_delete=models.CASCADE, null=True, blank=True)
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
 
