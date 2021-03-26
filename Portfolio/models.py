@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -36,16 +37,26 @@ class Qualification(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=128)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     technology_used = models.CharField(max_length=500)
     framework_used = models.CharField(max_length=500, null=True, blank=True)
     description = models.TextField(max_length=500)
     link = models.URLField(blank=True, null=True)
+    image = models.ImageField(upload_to='images/')
+
+    def save(self, *args, **kwargs):
+        for field in self._meta.fields:
+            if field.name == "image":
+                field.upload_to = f"images/{self.user.username}/Projects/"
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
 
 
 class Social_Site_Connection(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField()
     github = models.URLField()
     hackerrank = models.URLField()
@@ -58,6 +69,7 @@ expiry_date_choices = (
 
 
 class Achievment(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     event_name = models.CharField(max_length=128)
     enrolled_in = models.DateField()
     finished_in = models.DateField()
@@ -66,18 +78,24 @@ class Achievment(models.Model):
     expiry_date = models.CharField(max_length=200, choices=expiry_date_choices)
     certificate = models.FileField(upload_to="Acievments/")
     certificate_url = models.URLField(null=True, blank=True)
+    created_date = models.DateTimeField(auto_now_add=True)
 
 
 class Pics(models.Model):
-    OptionalPic = models.ImageField(upload_to="media/images/", blank=True, null=True)
+    OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        for field in self._meta.fields:
+            if field.name == "OptionalPic":
+                field.upload_to = f"images/OptionalPic/"
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.OptionalPic
 
 
 class MyDetail(models.Model):
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=10)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     tell_about_me_your_self = models.TextField(max_length=500)
     profile_pic = models.ImageField(default="", upload_to="media/images/")
     optional_pic = models.ForeignKey(Pics, on_delete=models.CASCADE, null=True, blank=True)
@@ -87,8 +105,14 @@ class MyDetail(models.Model):
     projects_detail = models.ForeignKey(Project, on_delete=models.CASCADE)
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
 
+    def save(self, *args, **kwargs):
+        for field in self._meta.fields:
+            if field.name == "profile_pic":
+                field.upload_to = f"images/{self.user.username}/ProfilePic/"
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return ("{} " + "{}").format(self.first_name, self.last_name)
+        return ("{} " + "{}").format(self.user.first_name, self.user.last_name)
 
 
 class Subscribe(models.Model):
