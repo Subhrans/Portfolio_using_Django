@@ -7,7 +7,9 @@ from .models import (MyDetail,
                      Social_Site_Connection,
                      Secondary_Examination,
                      Higher_Secondary_Examination,
-                     Post_Graduation
+                     Post_Graduation,
+                     Subscribe,
+
             )
 # Register your models here.
 admin.site.register(MyDetail)

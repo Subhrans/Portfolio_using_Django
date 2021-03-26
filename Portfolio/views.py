@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .forms import subscribe
 from .models import (MyDetail,
                      Post_Graduation,
-                     subscribe,
+                     Subscribe,
                      Higher_Secondary_Examination,
                      Secondary_Examination,
                      Social_Site_Connection,
@@ -10,17 +10,23 @@ from .models import (MyDetail,
                      Project,
                      Qualification,
                      Under_Graduation,)
+
 # Create your views here.
+
+
 def base_view(request):
-    return render(request,'base.html',context=None)
+    return render(request, 'base.html', context=None)
+
+
 def index(request):
-    if(request.method=='POST'):
-        subs=subscribe(request.POST)
-        if(subs.is_valid()):
-            email=subs.cleaned_data['email']
-            print("user email is: ",email)
+    if request.method == 'POST':
+        subs = subscribe(request.POST)
+        if subs.is_valid():
+            email = subs.cleaned_data['email']
+            print("user email is: ", email)
     else:
-        myprofile=MyDetail.objects.all()
-        subs=subscribe()
-        context={'myprofile':myprofile,'from':subs}
-    return render(request,'portfolio/home.html',context)
+        myprofile = MyDetail.objects.all()
+        subs = Subscribe()
+        context = {'myprofile': myprofile, 'from': subs}
+
+    return render(request, 'portfolio/home.html', context)

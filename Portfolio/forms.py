@@ -1,6 +1,6 @@
 from django import forms
 from django.core import validators
-from .models import subscribe
+from .models import Subscribe
 class subscribe(forms.Form):
     email=forms.EmailField(label="Email",
                            label_suffix="",
