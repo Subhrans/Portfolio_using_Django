@@ -37,7 +37,7 @@ class Qualification(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=128)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
     technology_used = models.CharField(max_length=500)
     framework_used = models.CharField(max_length=500, null=True, blank=True)
     description = models.TextField(max_length=500)
@@ -47,7 +47,7 @@ class Project(models.Model):
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
             if field.name == "image":
-                field.upload_to = f"images/{self.user.username}/Projects/"
+                field.upload_to = f"images/Projects/"
 
         super().save(*args, **kwargs)
 
@@ -104,8 +104,9 @@ class MyDetail(models.Model):
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
 
     qualification = models.ForeignKey(Qualification, on_delete=models.CASCADE)
-    projects_detail = models.ForeignKey(Project, on_delete=models.CASCADE)
+    projects_detail = models.ManyToManyField(Project, related_name="projects")
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
+    # created_date=models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:

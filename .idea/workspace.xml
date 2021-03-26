@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="fixing all models">
-      <change afterPath="$PROJECT_DIR$/media/Acievments/doctor_app.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/OptionalPic/about-us.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/joy/ProfilePic/banner-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/joy/Projects/keekers.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/joy/Projects/music_player.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="adding alt_text">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0005_auto_20210326_2256.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0006_remove_project_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/doctor_app.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/library_MG.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/subhransu/Projects/music_player.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -432,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616776084815</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="adding alt_text">
+      <created>1616779417552</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616779417552</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -478,7 +480,8 @@
     <MESSAGE value="optional pic error" />
     <MESSAGE value="optional pic error solved" />
     <MESSAGE value="fixing all models" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing all models" />
+    <MESSAGE value="adding alt_text" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding alt_text" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

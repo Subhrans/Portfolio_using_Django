@@ -13,7 +13,7 @@
         <div class="row grid">
             {% for project in projects %}
 
-            <div class="col-lg-4 col-md-6 col-sm-12 element-item {{project.technology_used}}">
+            <div class="col-lg-4 col-md-6 col-sm-12 element-item {{project.technology_used|lower}}">
                 <div class="our-project">
                     <div class="img">
                         <a class="text-popup-link" href="./images/keekers.gif">
@@ -26,50 +26,7 @@
                     <span class="text-secondary">{{project.description}}</span>
                 </div>
             </div>
-<!--            <div class="col-lg-4 col-md-6 col-sm-12 element-item python">-->
-<!--                <div class="our-project">-->
-<!--                    <div class="img">-->
-<!--                        <a class="text-popup-link" href="./images/music_player.gif">-->
-<!--                            <img src="./images/music_player.gif" alt="portfolio-2">-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="title py-4">-->
-<!--                    <h4 class="text-uppercase">Music Player</h4>-->
-<!--                    <span class="text-secondary">A music player using Tkinter (python)</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-lg-4 col-md-6 col-sm-12 element-item java">-->
-<!--                <div class="our-project">-->
-<!--                    <div class="img">-->
-<!--                        <a class="text-popup-link" href="./images/doctor_app.gif">-->
-<!--                            <img src="./images/doctor_app.gif" alt="portfolio-3">-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="title py-4">-->
-<!--                    <h4 class="text-uppercase">Doc's App</h4>-->
-<!--                    <span class="text-secondary">Doctors Appointment App using swing (java)</span>-->
-<!--                </div>-->
-<!--            </div>-->
             {% endfor %}
-        </div>
-        <div class="row grid">
-            <div class="col-lg-4 col-md-6 col-sm-12 element-item java">
-                <div class="our-project">
-                    <div class="img">
-                        <a class="text-popup-link" href="./images/library_MG.gif">
-                            <img src="./images/library_MG.gif" alt="portfolio-1">
-                        </a>
-                    </div>
-
-                </div>
-                <div class="title py-4">
-                    <h4 class="text-uppercase">Library Management System</h4>
-                    <span class="text-secondary">Library Management System using swing (Java)</span>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
