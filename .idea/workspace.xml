@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="adding alt_text">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0005_auto_20210326_2256.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0006_remove_project_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Projects/doctor_app.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Projects/library_MG.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/subhransu/Projects/music_player.gif" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="project section done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616779417552</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="project section done">
+      <created>1616780182659</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616780182659</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -481,7 +484,8 @@
     <MESSAGE value="optional pic error solved" />
     <MESSAGE value="fixing all models" />
     <MESSAGE value="adding alt_text" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding alt_text" />
+    <MESSAGE value="project section done" />
+    <option name="LAST_COMMIT_MESSAGE" value="project section done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

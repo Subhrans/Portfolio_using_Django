@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from .forms import SubscribeForm
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import (MyDetail,
                      Post_Graduation,
                      Subscribe,
@@ -16,15 +19,24 @@ from .models import (MyDetail,
 
 
 def index(request):
-    # if request.method == 'POST':
-    #     subs = SubscribeForm(request.POST)
-    #     if subs.is_valid():
-    #         email = subs.cleaned_data['email']
-    #         print("user email is: ", email)
-    # else:
+    if request.method == 'POST':
+        subscribe_form = SubscribeForm(request.POST)
+        if subscribe_form.is_valid():
+            email = subscribe_form.cleaned_data['email']
+            name = email.split('@')[0]
+            send_mail(
+                subject="Subscribed User",
+                message="Thanks For subscribing us",
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[settings.EMAIL_HOST_USER,'subhransud525@gmail.com'],
+            )
+            Subscribe.objects.create(name=name,email=email)
+            print("user email is: ", email)
+            return HttpResponseRedirect('/')
+    else:
+        subscribe_form = SubscribeForm()
     myprofile = MyDetail.objects.all()
     projects = Project.objects.all()
-    subscribe_form = SubscribeForm()
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
