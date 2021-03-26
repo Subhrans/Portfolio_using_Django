@@ -47,10 +47,10 @@ CVbtns.click(function()
   }, false);
 
 });
-$('.subscribe-us-area .subscribe .d-sm-flex .w-50 .col .btn-submit .btn-success').click(function(){
-  var inputval=$('.subscribe-us-area .subscribe .d-sm-flex .w-50 .flex-wrap .input-textbox .form-control').val();
-  alert('Thanks for subscribing.. @'+inputval);
-});
+// $('.subscribe-us-area .subscribe .d-sm-flex .w-50 .col .btn-submit .btn-success').click(function(){
+//   var inputval=$('.subscribe-us-area .subscribe .d-sm-flex .w-50 .flex-wrap .input-textbox .form-control').val();
+//   alert('Thanks for subscribing.. @'+inputval);
+// });
 
 // sticky navmenu
 var nav_offset_top=$('.header_area').height();

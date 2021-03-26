@@ -1,0 +1,6 @@
+.subscribe_successful .container{
+  background: url('/static/portfolio/images/subscribe-bg.png') no-repeat;
+  padding: 10rem 0;
+  margin: 3rem auto;
+  border-radius: 5px;
+}

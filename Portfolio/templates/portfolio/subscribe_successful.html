@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/subscribe_successful.css' %}">
+{% endblock %}
+{% block content %}
+{% include 'portfolio/subscribe_successful_navbar.html' %}
+<section class="subscribe_successful">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3 text-center text-light"> Thank you {{name}} For Subscribing Us</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

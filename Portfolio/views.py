@@ -32,7 +32,7 @@ def index(request):
             )
             Subscribe.objects.create(name=name,email=email)
             print("user email is: ", email)
-            return HttpResponseRedirect('/')
+            return render(request, 'portfolio/subscribe_successful.html', {'name':name,"email":email})
     else:
         subscribe_form = SubscribeForm()
     myprofile = MyDetail.objects.all()
