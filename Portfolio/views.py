@@ -37,10 +37,13 @@ def index(request):
         subscribe_form = SubscribeForm()
     myprofile = MyDetail.objects.all()
     projects = Project.objects.all()
+    social_links = Social_Site_Connection.objects.all()
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
         'projects': projects,
+        "social_links":social_links,
+
     }
 
     return render(request, 'portfolio/home.html', context)

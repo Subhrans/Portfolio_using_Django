@@ -40,8 +40,8 @@ CVbtns.click(function()
   document.getElementById("resume").addEventListener("click", function(){
       // Generate download of hello.txt file with some content
       // var text = document.getElementById("").value;
-      var text="/images/about-us.png";
-      var filename = "C:/Users/Subhransu das/Desktop/bootstrap/JQuery+Ajax/Portfolio using bootstrap/images/about-us.png";
+      var text="/static/portfolio/images/about-us.png";
+      var filename = "/static/portfolio/images/about-us.png";
 
       download(filename, text);
   }, false);

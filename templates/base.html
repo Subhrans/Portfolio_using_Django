@@ -21,6 +21,9 @@
     <!--   font awesome   -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <!-- Magnific Popup core CSS file -->
+        <link rel="stylesheet" href="{% static 'portfolio/vendor/Magnific-Popup/dist/magnific-popup.css' %}">
+
     <!--    My Custom CSS  -->
         <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'portfolio/css/responsive.css' %}">
@@ -44,10 +47,6 @@
     <script src="{% static 'portfolio/vendor/isotope/isotope.min.js' %}"></script>
     <!-- Magnetic popup -->
     <script src="{% static 'portfolio/vendor/Magnific-Popup/dist/jquery.magnific-popup.js' %}"></script>
-    <script src="{% static 'portfolio/js/main.js' %}"></script>
-    <script type="text/javascript">
-        {% block script %}
-        {% endblock %}
-    </script>
+<script src="{% static 'portfolio/js/main.js' %}"></script>
 </body>
 </html>

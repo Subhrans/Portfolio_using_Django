@@ -1,5 +1,5 @@
-@import url("./partials/variables.css");
-@import "./partials/_globals.css";
+@import url("/static/portfolio/css/partials/variables.css");
+@import "/static/portfolio/css/partials/_globals.css";
 html{
 	scroll-behavior: smooth;
 }
@@ -124,7 +124,7 @@ p{
 
 /* subscribe area */
 .site-main .subscribe-us-area .subscribe{
-  background: url('../images/subscribe-bg.png') no-repeat;
+  background: url('/static/portfolio/images/subscribe-bg.png') no-repeat;
   padding: 10rem 0;
   margin: 3rem auto;
   border-radius: 5px;
