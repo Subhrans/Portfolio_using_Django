@@ -103,16 +103,19 @@ class MyDetail(models.Model):
     alternative_text = models.CharField(max_length=40, default="")
     optional_pic = models.ForeignKey(Pics, on_delete=models.CASCADE, null=True, blank=True)
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
-
+    resume = models.FileField(upload_to="Resume/", null=True, blank=True)
     qualification = models.ForeignKey(Qualification, on_delete=models.CASCADE)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
+
     # created_date=models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
             if field.name == "profile_pic":
                 field.upload_to = f"images/{self.user.username}/ProfilePic/"
+            if field.name == "resume":
+                field.upload_to = f"Resume/{self.user.username}/"
         super().save(*args, **kwargs)
 
     def __str__(self):

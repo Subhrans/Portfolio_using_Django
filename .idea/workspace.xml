@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="adding requirements and subscribe_navbar">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0007_auto_20210331_1000.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="Added github_links and web_links">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0008_mydetail_resume.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/bandicam 2021-03-31 10-19-54-837.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/hire_me.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Resume/joy/Subhransu_Das_Resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/bandicam_2021-03-31_10-19-54-837.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -458,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616790499407</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added github_links and web_links">
+      <created>1617166059964</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1617166059964</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -509,7 +523,8 @@
     <MESSAGE value="sending email error" />
     <MESSAGE value="almost done" />
     <MESSAGE value="adding requirements and subscribe_navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding requirements and subscribe_navbar" />
+    <MESSAGE value="Added github_links and web_links" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added github_links and web_links" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
