@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="almost done">
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/subscribe_successful.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe_successful.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe_successful_navbar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="adding requirements and subscribe_navbar">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0007_auto_20210331_1000.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -456,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616788066345</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adding requirements and subscribe_navbar">
+      <created>1616790499407</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616790499407</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -506,7 +508,8 @@
     <MESSAGE value="project section done" />
     <MESSAGE value="sending email error" />
     <MESSAGE value="almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="almost done" />
+    <MESSAGE value="adding requirements and subscribe_navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding requirements and subscribe_navbar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

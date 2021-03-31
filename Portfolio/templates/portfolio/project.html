@@ -22,7 +22,20 @@
                     </div>
                 </div>
                 <div class="title py-4">
-                    <h4 class="text-uppercase">{{project.name}}</h4>
+                    <h4 class="text-uppercase text-dark">
+                        {% if project.github_link %}
+                        <a href="{{project.gihub_link}}" class="text-decoration-none text-dark">{{project.name}}</a>
+                        {% else %}
+                        {{project.name}}
+                        {% endif %}
+                    </h4>
+                    {% if project.github_link %}
+                    <a href="{{project.github_link}}" target="_blank" class="text-decoration-none mr-4">Github Link</a>
+                    {% endif %}
+                    {% if project.web_link %}
+                     <a href="{{project.web_link}}" target="_blank" class="text-decoration-none">web Link</a>
+                    {% endif %}
+                    <br>
                     <span class="text-secondary">{{project.description}}</span>
                 </div>
             </div>

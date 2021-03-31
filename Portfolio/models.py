@@ -41,7 +41,8 @@ class Project(models.Model):
     technology_used = models.CharField(max_length=500)
     framework_used = models.CharField(max_length=500, null=True, blank=True)
     description = models.TextField(max_length=500)
-    link = models.URLField(blank=True, null=True)
+    github_link = models.URLField(blank=True, null=True)
+    web_link = models.URLField(blank=True, null=True)
     image = models.ImageField(upload_to='images/')
 
     def save(self, *args, **kwargs):
