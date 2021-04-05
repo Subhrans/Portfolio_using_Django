@@ -47,6 +47,8 @@
     <script src="{% static 'portfolio/vendor/isotope/isotope.min.js' %}"></script>
     <!-- Magnetic popup -->
     <script src="{% static 'portfolio/vendor/Magnific-Popup/dist/jquery.magnific-popup.js' %}"></script>
-<script src="{% static 'portfolio/js/main.js' %}"></script>
+    {% block js %}
+    <script src="{% static 'portfolio/js/main.js' %}"></script>
+    {% endblock %}
 </body>
 </html>

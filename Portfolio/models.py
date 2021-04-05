@@ -128,3 +128,13 @@ class Subscribe(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ContactUs(models.Model):
+    first_name = models.CharField(max_length=128)
+    last_name =models.CharField(max_length=128)
+    email = models.EmailField()
+    query = models.TextField()
+
+    def __str__(self):
+        return self.email
