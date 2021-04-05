@@ -1,11 +1,11 @@
-
+from decouple import config
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 
-SECRET_KEY = '%*@d1^r2e!-c#e)^yyt7h7f_*t6n48t67^8&va&4dod7x^ery)'
+SECRET_KEY = config('key_things')
 
 DEBUG = True
 
