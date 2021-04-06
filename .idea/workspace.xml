@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="contact form">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="fixed subscribe button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -521,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617653984812</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fixed subscribe button">
+      <created>1617654935868</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617654935868</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -552,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Adding navbar" />
     <MESSAGE value="fixing navbar 1" />
     <MESSAGE value="fixing navbar 2" />
     <MESSAGE value="adding subscribe in model.py as well as forms.py file" />
@@ -577,7 +583,8 @@
     <MESSAGE value="decouple on privacy" />
     <MESSAGE value="changed title" />
     <MESSAGE value="contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact form" />
+    <MESSAGE value="fixed subscribe button" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed subscribe button" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
