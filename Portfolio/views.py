@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import (
     MyDetail,
     Subscribe,
+ContactBackend,
 )
 
 
@@ -43,13 +44,21 @@ def contact_us_view(request):
     if request.method == "POST":
         cuform = ContactUsForm(request.POST)
         if cuform.is_valid():
+            backend=ContactBackend.objects.get(user=request.user)
             msg = cuform.cleaned_data['query']
             user = cuform.cleaned_data['email']
-            send_mail(subject='query',
-                      message=msg,
-                      from_email=settings.EMAIL_HOST_USER,
-                      recipient_list=[user, settings.EMAIL_HOST_USER],
-                      )
+            if backend.user.is_superuser:
+                send_mail(subject='query',
+                          message=msg,
+                          from_email=settings.EMAIL_HOST_USER,
+                          recipient_list=[user, settings.EMAIL_HOST_USER],
+                          )
+            else:
+                send_mail(subject='query',
+                          message=msg,
+                          from_email=backend.gmail,
+                          recipient_list=[user, settings.EMAIL_HOST_USER],
+                          )
             cuform.save()
             return HttpResponseRedirect('/contact_us/')
     else:

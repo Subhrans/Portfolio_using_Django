@@ -34,7 +34,8 @@ class Social_Site_Connection(models.Model):
     linkedIn = models.URLField(null=True, blank=True)
 
     class Meta:
-        verbose_name_plural="Social Site Connections"
+        verbose_name_plural = "Social Site Connections"
+
     def __str__(self):
         return self.user.username
 
@@ -118,3 +119,16 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return self.email
+
+
+class ContactBackend(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    gmail = models.EmailField(default="")
+    password = models.CharField(max_length=200, verbose_name="App Password (gmail)")
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "Contact Us Backend"
+
+    def __str__(self):
+        return self.user.username

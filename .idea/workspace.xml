@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="contact section color changed">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0010_auto_20210406_2215.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0011_auto_20210406_2217.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0012_remove_social_site_connection_email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0013_auto_20210406_2246.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="remove redundant tables">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0014_contactbackend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0015_contactbackend_gmail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -543,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617695199778</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="remove redundant tables">
+      <created>1617729990327</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1617729990327</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -574,7 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixing navbar 2" />
     <MESSAGE value="adding subscribe in model.py as well as forms.py file" />
     <MESSAGE value="subscribe.html" />
     <MESSAGE value="about.html" />
@@ -599,7 +601,8 @@
     <MESSAGE value="contact form" />
     <MESSAGE value="fixed subscribe button" />
     <MESSAGE value="contact section color changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact section color changed" />
+    <MESSAGE value="remove redundant tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove redundant tables" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
