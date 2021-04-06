@@ -6,7 +6,7 @@ from django.conf import settings
 from .models import (
     MyDetail,
     Subscribe,
-ContactBackend,
+    ContactBackend,
 )
 
 
@@ -30,7 +30,10 @@ def index(request):
             return render(request, 'portfolio/subscribe_successful.html', {'name': name, "email": email})
     else:
         subscribe_form = SubscribeForm()
-    myprofile = MyDetail.objects.filter(user=request.user)
+    if request.user.is_anonymous:
+        myprofile = MyDetail.objects.filter(user=1)
+    else:
+        myprofile = MyDetail.objects.filter(user=request.user)
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
@@ -44,7 +47,7 @@ def contact_us_view(request):
     if request.method == "POST":
         cuform = ContactUsForm(request.POST)
         if cuform.is_valid():
-            backend=ContactBackend.objects.get(user=request.user)
+            backend = ContactBackend.objects.get(user=request.user)
             msg = cuform.cleaned_data['query']
             user = cuform.cleaned_data['email']
             if backend.user.is_superuser:
@@ -57,7 +60,8 @@ def contact_us_view(request):
                 send_mail(subject='query',
                           message=msg,
                           from_email=backend.gmail,
-                          recipient_list=[user, settings.EMAIL_HOST_USER],
+                          recipient_list=[user, backend.gmail],
+                          auth_user=backend.gmail, auth_password=backend.password
                           )
             cuform.save()
             return HttpResponseRedirect('/contact_us/')
