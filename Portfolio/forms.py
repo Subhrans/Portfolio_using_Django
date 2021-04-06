@@ -1,6 +1,6 @@
 from django import forms
 from django.core import validators
-from .models import Subscribe, ContactUs,ContactBackend
+from .models import Subscribe, ContactUs,MailBackend
 
 
 class SubscribeForm(forms.ModelForm):
@@ -37,5 +37,5 @@ class ContactUsForm(forms.ModelForm):
 
 class ContactBackendForm(forms.ModelForm):
     class Meta:
-        model=ContactBackend
+        model=MailBackend
         fields=['user','gmail','password']

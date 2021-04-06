@@ -121,7 +121,7 @@ class ContactUs(models.Model):
         return self.email
 
 
-class ContactBackend(models.Model):
+class MailBackend(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gmail = models.EmailField(default="")
     password = models.CharField(max_length=200, verbose_name="App Password (gmail)")

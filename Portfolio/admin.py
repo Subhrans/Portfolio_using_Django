@@ -6,7 +6,7 @@ from .models import (MyDetail,
                      Subscribe,
                      Pics,
                      ContactUs,
-                     ContactBackend,
+                     MailBackend,
                      )
 
 # Register your models here.
@@ -17,4 +17,4 @@ admin.site.register(Pics)
 admin.site.register(Subscribe)
 admin.site.register(Social_Site_Connection)
 admin.site.register(ContactUs)
-admin.site.register(ContactBackend)
+admin.site.register(MailBackend)

@@ -30,9 +30,15 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'portfolio:contact_us' %}">Contact</a>
             </li>
+            {% if request.user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'portfolio:contact_us' %}">Login</a>
+              <a class="nav-link" href="/admin/">Profile</a>
             </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/">Login</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </nav>

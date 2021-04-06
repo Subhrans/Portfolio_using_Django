@@ -6,7 +6,7 @@ from django.conf import settings
 from .models import (
     MyDetail,
     Subscribe,
-    ContactBackend,
+    MailBackend,
 )
 
 
@@ -19,12 +19,22 @@ def index(request):
         if subscribe_form.is_valid():
             email = subscribe_form.cleaned_data['email']
             name = email.split('@')[0]
-            send_mail(
-                subject="Subscribed User",
-                message="Thanks For subscribing us",
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[settings.EMAIL_HOST_USER, 'subhransud525@gmail.com'],
-            )
+            backend = MailBackend.objects.get(user=request.user)
+            if backend.user.is_superuser:
+                send_mail(
+                    subject="Subscribed User",
+                    message="Thanks For subscribing us",
+                    from_email=settings.EMAIL_HOST_USER,
+                    recipient_list=[settings.EMAIL_HOST_USER, email],
+                )
+            else:
+                send_mail(
+                    subject="Subscribed User",
+                    message="Thanks For subscribing us",
+                    from_email=backend.gmail,
+                    recipient_list=[backend.gmail, email],
+                    auth_user=backend.gmail, auth_password=backend.password
+                )
             Subscribe.objects.create(name=name, email=email)
             print("user email is: ", email)
             return render(request, 'portfolio/subscribe_successful.html', {'name': name, "email": email})
@@ -47,7 +57,7 @@ def contact_us_view(request):
     if request.method == "POST":
         cuform = ContactUsForm(request.POST)
         if cuform.is_valid():
-            backend = ContactBackend.objects.get(user=request.user)
+            backend = MailBackend.objects.get(user=request.user)
             msg = cuform.cleaned_data['query']
             user = cuform.cleaned_data['email']
             if backend.user.is_superuser:
