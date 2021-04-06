@@ -3,38 +3,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-class Under_Graduation(models.Model):
-    Institute_name = models.CharField(max_length=100)
-    degree = models.CharField(max_length=120)
-    year_of_graduated = models.DateField()
-
-
-class Post_Graduation(models.Model):
-    Institute_name = models.CharField(max_length=100)
-    degree = models.CharField(max_length=120)
-    year_of_graduated = models.DateField()
-
-
-class Secondary_Examination(models.Model):
-    name = models.CharField(max_length=128)
-    year_of_pass_out = models.DateField()
-
-
-class Higher_Secondary_Examination(models.Model):
-    name = models.CharField(max_length=128)
-    year_of_pass_out = models.DateField()
-
-
-class Qualification(models.Model):
-    secondary_examination_details = models.ForeignKey(Secondary_Examination, on_delete=models.CASCADE)
-
-    higher_secondary_examination_details = models.ForeignKey(Higher_Secondary_Examination, on_delete=models.CASCADE)
-
-    under_graduation_details = models.ForeignKey(Under_Graduation, on_delete=models.CASCADE)
-
-    post_graduation_details = models.ForeignKey(Post_Graduation, on_delete=models.CASCADE)
-
-
 class Project(models.Model):
     name = models.CharField(max_length=128)
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -58,10 +26,17 @@ class Project(models.Model):
 
 class Social_Site_Connection(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    email = models.EmailField()
-    github = models.URLField()
-    hackerrank = models.URLField()
-    linkedIn = models.URLField()
+    github = models.URLField(null=True, blank=True)
+    facebook = models.URLField(default="")
+    instagram = models.URLField(null=True, blank=True)
+    stack_overflow = models.URLField(null=True, blank=True)
+    hackerrank = models.URLField(null=True, blank=True)
+    linkedIn = models.URLField(null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural="Social Site Connections"
+    def __str__(self):
+        return self.user.username
 
 
 expiry_date_choices = (
@@ -86,6 +61,9 @@ class Pics(models.Model):
     OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)
     alternative_text = models.CharField(max_length=40, default="")
 
+    class Meta:
+        verbose_name_plural = "Pics"
+
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
             if field.name == "OptionalPic":
@@ -104,7 +82,6 @@ class MyDetail(models.Model):
     optional_pic = models.ForeignKey(Pics, on_delete=models.CASCADE, null=True, blank=True)
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
     resume = models.FileField(upload_to="Resume/", null=True, blank=True)
-    qualification = models.ForeignKey(Qualification, on_delete=models.CASCADE)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
 
@@ -132,9 +109,12 @@ class Subscribe(models.Model):
 
 class ContactUs(models.Model):
     first_name = models.CharField(max_length=128)
-    last_name =models.CharField(max_length=128)
+    last_name = models.CharField(max_length=128)
     email = models.EmailField()
     query = models.TextField()
+
+    class Meta:
+        verbose_name_plural = "Contact Us"
 
     def __str__(self):
         return self.email

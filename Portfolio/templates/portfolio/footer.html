@@ -2,11 +2,27 @@
     <div class="container">
         <div class="social text-center">
             <h5 class="text-uppercase">Follow ME</h5>
-            <a href="https://www.facebook.com/subhransu.das.564/" target="-_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/subhransu1299/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/subhransu-das-908959147/" target="_blank"><i
+            {% for link in myprofile %}
+            {% if link.social_site_connection_details.facebook %}
+            <a href="{{link.social_site_connection_details.facebook}}" target="-_blank"><i class="fab fa-facebook"></i></a>
+            {% endif %}
+            {% if link.social_site_connection_details.instagram %}
+            <a href="{{link.social_site_connection_details.instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
+            {% endif %}
+            {% if link.social_site_connection_details.linkedIn %}
+            <a href="{{link.social_site_connection_details.linkedIn}}" target="_blank"><i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://www.hackerrank.com/subhransud525" target="_blank"><i class="fab fa-hackerrank"></i></a>
+            {% endif %}
+            {% if link.social_site_connection_details.hackerrank %}
+            <a href="{{link.social_site_connection_details.hackerrank}}" target="_blank"><i class="fab fa-hackerrank"></i></a>
+            {% endif %}
+            {% if link.social_site_connection_details.github %}
+            <a href="{{link.social_site_connection_details.github}}" target="_blank"><i class="fab fa-github"></i></a>
+            {% endif %}
+            {% if link.social_site_connection_details.stack_overflow %}
+            <a href="{{link.social_site_connection_details.stack_overflow}}" target="_blank"><i class="fab fa-stack_overflow"></i></a>
+            {% endif %}
+            {% endfor %}
         </div>
         <div class="copyrights text-center">
             <p class="para"> Copyrights &copy;2020 All rights reserved | This portfolio website made by

@@ -11,8 +11,8 @@
             <button type="button" name="button" data-filter=".upcomming" class="">upcomming</button>
         </div>
         <div class="row grid">
-            {% for project in projects %}
-
+            {% for projects in myprofile %}
+                {% for project in projects.projects_detail.all %}
             <div class="col-lg-4 col-md-6 col-sm-12  element-item {{project.technology_used|lower}}">
                 <div class="our-project">
                     <div class="img">
@@ -35,6 +35,7 @@
                     <span class="text-secondary">{{project.description}}</span>
                 </div>
             </div>
+            {% endfor %}
             {% endfor %}
         </div>
     </div>
