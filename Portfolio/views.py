@@ -84,3 +84,7 @@ def contact_us_view(request):
     context = {'i': cuform,"mydetail":mydetail}
 
     return render(request, 'portfolio/contact.html', context)
+
+
+def login_view(request):
+    return render(request,'portfolio/login.html')

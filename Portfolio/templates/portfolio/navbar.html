@@ -36,12 +36,11 @@
               <div class="dropdown-menu" aria-labelledby="Profile">
                 <a class="dropdown-item" href="/admin/">Backend View</a>
                   <a class="dropdown-item" href="#">Logout</a>
-
               </div>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="/admin/">Login</a>
+              <a class="nav-link" href="{% url 'portfolio:login' %}">Login</a>
             </li>
             {% endif %}
           </ul>
