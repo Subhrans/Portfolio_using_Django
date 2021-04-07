@@ -7,6 +7,7 @@
                         <img src="/media/{{mydetail.optional_pic.OptionalPic}}" alt="about-my-image" class="img-fluid">
                     </div>
                 </div>
+                {% if mydetail.tell_about_me_your_self %}
                 <div class="col-lg-6 col-md-6 col-sm-12 about title">
                     <h2 class="text-uppercase pt-5">
                         <span>Let Me</span>
@@ -26,6 +27,7 @@
                         Download CV
                     </a>
                 </div>
+                {% endif %}
             </div>
         </div>
     </section>

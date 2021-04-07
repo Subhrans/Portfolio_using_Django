@@ -85,8 +85,8 @@ class MyDetail(models.Model):
     resume = models.FileField(upload_to="Resume/", null=True, blank=True)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
-
-    # created_date=models.DateTimeField(auto_now_add=True)
+    contact_number = models.CharField(max_length=16, default="",
+                                      help_text="(Hint) add spaces for format the number as mine")
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:

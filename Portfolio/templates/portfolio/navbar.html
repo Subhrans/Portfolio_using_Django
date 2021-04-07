@@ -31,8 +31,13 @@
               <a class="nav-link" href="{% url 'portfolio:contact_us' %}">Contact</a>
             </li>
             {% if request.user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="/admin/">Profile</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="/admin/" id="Profile" data-toggle="dropdown">Profile</a>
+              <div class="dropdown-menu" aria-labelledby="Profile">
+                <a class="dropdown-item" href="/admin/">Backend View</a>
+                  <a class="dropdown-item" href="#">Logout</a>
+
+              </div>
             </li>
             {% else %}
             <li class="nav-item">

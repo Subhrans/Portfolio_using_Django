@@ -37,7 +37,7 @@ def index(request):
                 )
             Subscribe.objects.create(name=name, email=email)
             print("user email is: ", email)
-            return render(request, 'portfolio/subscribe_successful.html', {'name': name, "email": email})
+            return render(request, 'portfolio/subscribe_successful.html', {'name': name, "email": email,'backend':backend})
     else:
         subscribe_form = SubscribeForm()
     if request.user.is_anonymous:
@@ -77,7 +77,10 @@ def contact_us_view(request):
             return HttpResponseRedirect('/contact_us/')
     else:
         cuform = ContactUsForm()
-
-    context = {'i': cuform}
+    if request.user.is_anonymous:
+        mydetail=MyDetail.objects.filter(user=1)
+    else:
+        mydetail=MyDetail.objects.filter(user=request.user)
+    context = {'i': cuform,"mydetail":mydetail}
 
     return render(request, 'portfolio/contact.html', context)

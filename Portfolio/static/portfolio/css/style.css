@@ -25,7 +25,11 @@ html{
   background: var(--gradient-color);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+  display:block;
   /* background-clip: text; */
+}
+.dropdown a:hover{
+    display:block;
 }
 .header_area .main-menu .navbar .navbar-brand{
   text-transform: uppercase;
