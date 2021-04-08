@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="profile section add">
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/undraw_unlock_24mb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/undraw_unlock_24mb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/registration.html" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="login page design done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -579,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617818592151</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="login page design done">
+      <created>1617829708088</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1617829708089</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -610,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fetching data from server" />
     <MESSAGE value="correction of css" />
     <MESSAGE value="optional pic error" />
     <MESSAGE value="optional pic error solved" />
@@ -635,7 +633,8 @@
     <MESSAGE value="anonymous user default view" />
     <MESSAGE value="MailBackend" />
     <MESSAGE value="profile section add" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile section add" />
+    <MESSAGE value="login page design done" />
+    <option name="LAST_COMMIT_MESSAGE" value="login page design done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
