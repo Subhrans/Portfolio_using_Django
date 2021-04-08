@@ -24,34 +24,6 @@ $(document).ready(function(){
     enabled:true
   },
 });
-var CVbtns=$('.site-main .about-area .container-fluid .about .primary-button');
-CVbtns.click(function()
-{
-  function download(filename) {
-      var element = document.createElement('a');
-      element.href =filename;
-      element.setAttribute('download','new_image');
-      document.body.appendChild(element);
-
-      element.click();
-  }
-
-  // Start file download.
-  document.getElementById("resume").addEventListener("click", function(){
-      // Generate download of hello.txt file with some content
-      // var text = document.getElementById("").value;
-      var text="/static/portfolio/images/about-us.png";
-      var filename = "/static/portfolio/images/about-us.png";
-
-      download(filename, text);
-  }, false);
-
-});
-// $('.subscribe-us-area .subscribe .d-sm-flex .w-50 .col .btn-submit .btn-success').click(function(){
-//   var inputval=$('.subscribe-us-area .subscribe .d-sm-flex .w-50 .flex-wrap .input-textbox .form-control').val();
-//   alert('Thanks for subscribing.. @'+inputval);
-// });
-
 // sticky navmenu
 var nav_offset_top=$('.header_area').height();
 function navbarFixed()

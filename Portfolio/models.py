@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 
 
 # Create your models here.
@@ -87,6 +88,8 @@ class MyDetail(models.Model):
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
     contact_number = models.CharField(max_length=16, default="",
                                       help_text="(Hint) add spaces for format the number as mine")
+    url = models.URLField(default="", editable=False)
+    slug = models.SlugField(allow_unicode=True, editable=False, default="")
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -94,6 +97,9 @@ class MyDetail(models.Model):
                 field.upload_to = f"images/{self.user.username}/ProfilePic/"
             if field.name == "resume":
                 field.upload_to = f"Resume/{self.user.username}/"
+
+        self.slug = slugify(self.user)
+        self.url = self.slug
         super().save(*args, **kwargs)
 
     def __str__(self):

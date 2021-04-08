@@ -10,7 +10,13 @@ from .models import (MyDetail,
                      )
 
 # Register your models here.
-admin.site.register(MyDetail)
+@admin.register(MyDetail)
+class MyDetailAdmin(admin.ModelAdmin):
+    # fields = ['id','url']
+    list_display = ['id','url','user','slug']
+    list_display_links = ['id','user','slug']
+    # prepopulated_fields = {"url":('id',)}
+# admin.site.register(MyDetail)
 admin.site.register(Project)
 admin.site.register(Achievment)
 admin.site.register(Pics)

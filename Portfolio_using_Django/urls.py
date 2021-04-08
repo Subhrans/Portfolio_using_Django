@@ -2,7 +2,8 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
-
+admin.site.site_header="Portfolio Admininstration"
+admin.site.site_title = "PORTFOLIO"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Portfolio.urls')),

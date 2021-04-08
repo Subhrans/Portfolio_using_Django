@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.shortcuts import render,get_object_or_404
+from django.http import HttpResponseRedirect,HttpResponseBadRequest,HttpResponseNotFound,Http404
 from .forms import SubscribeForm, ContactUsForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
@@ -119,3 +119,13 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/login/')
+
+
+def portfolio_view(request, userid):
+    myprofile = MyDetail.objects.filter(user__username=userid) # userid is basically username
+    if not myprofile.exists():
+        return HttpResponseNotFound("Page not found")
+    context = {
+        'myprofile': myprofile
+    }
+    return render(request, 'portfolio/home.html', context)

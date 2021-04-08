@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="login page responsive done">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="login logout done">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0021_mydetail_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0022_mydetail_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0023_auto_20210408_2002.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/urls.py" afterDir="false" />
@@ -589,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617859361421</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="login logout done">
+      <created>1617866654334</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1617866654334</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -620,7 +633,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="optional pic error" />
     <MESSAGE value="optional pic error solved" />
     <MESSAGE value="fixing all models" />
     <MESSAGE value="adding alt_text" />
@@ -645,7 +657,8 @@
     <MESSAGE value="profile section add" />
     <MESSAGE value="login page design done" />
     <MESSAGE value="login page responsive done" />
-    <option name="LAST_COMMIT_MESSAGE" value="login page responsive done" />
+    <MESSAGE value="login logout done" />
+    <option name="LAST_COMMIT_MESSAGE" value="login logout done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
