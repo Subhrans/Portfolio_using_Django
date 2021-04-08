@@ -17,6 +17,8 @@ class MyDetailAdmin(admin.ModelAdmin):
     list_display_links = ['id','user','slug']
     # prepopulated_fields = {"url":('id',)}
 # admin.site.register(MyDetail)
+
+
 admin.site.register(Project)
 admin.site.register(Achievment)
 admin.site.register(Pics)

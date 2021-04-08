@@ -1,9 +1,8 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect, HttpResponseBadRequest, HttpResponseNotFound, Http404
+from django.shortcuts import render
+from django.http import HttpResponseRedirect, HttpResponseNotFound
 from .forms import SubscribeForm, ContactUsForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
@@ -12,9 +11,6 @@ from .models import (
     Subscribe,
     MailBackend,
 )
-
-
-# Create your views here.
 
 
 def index(request):
@@ -91,7 +87,6 @@ def contact_us_view(request):
     return render(request, 'portfolio/contact.html', context)
 
 
-# @login_required(login_url='/login/')
 def login_view(request):
     if not request.user.is_authenticated:
         if request.method == "POST":
