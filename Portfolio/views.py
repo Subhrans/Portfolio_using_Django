@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import SubscribeForm, ContactUsForm
+from .forms import SubscribeForm, ContactUsForm, LoginForm
+from django.contrib import messages
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import (
@@ -37,7 +41,8 @@ def index(request):
                 )
             Subscribe.objects.create(name=name, email=email)
             print("user email is: ", email)
-            return render(request, 'portfolio/subscribe_successful.html', {'name': name, "email": email,'backend':backend})
+            return render(request, 'portfolio/subscribe_successful.html',
+                          {'name': name, "email": email, 'backend': backend})
     else:
         subscribe_form = SubscribeForm()
     if request.user.is_anonymous:
@@ -78,13 +83,39 @@ def contact_us_view(request):
     else:
         cuform = ContactUsForm()
     if request.user.is_anonymous:
-        mydetail=MyDetail.objects.filter(user=1)
+        mydetail = MyDetail.objects.filter(user=1)
     else:
-        mydetail=MyDetail.objects.filter(user=request.user)
-    context = {'i': cuform,"mydetail":mydetail}
+        mydetail = MyDetail.objects.filter(user=request.user)
+    context = {'i': cuform, "mydetail": mydetail}
 
     return render(request, 'portfolio/contact.html', context)
 
 
+# @login_required(login_url='/login/')
 def login_view(request):
-    return render(request,'portfolio/login.html')
+    if not request.user.is_authenticated:
+        if request.method == "POST":
+            login_form = LoginForm(request=request.POST, data=request.POST)
+            if login_form.is_valid():
+                username = login_form.cleaned_data['username']
+                password = login_form.cleaned_data['password']
+                validate = authenticate(username=username, password=password)  # it return none if user not found
+                if validate is not None:
+                    login(request, validate)
+                    return HttpResponseRedirect('/')
+            else:
+                messages.error(request, "Invalid Credentials")
+        else:
+            login_form = LoginForm()
+    else:
+        return HttpResponseRedirect('/')
+    context = {
+        'lform': login_form,
+    }
+    return render(request, 'portfolio/login.html', context)
+
+
+@login_required(login_url='/login/')
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/login/')
