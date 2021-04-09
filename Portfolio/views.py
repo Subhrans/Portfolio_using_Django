@@ -10,6 +10,7 @@ from .models import (
     MyDetail,
     Subscribe,
     MailBackend,
+    Project,
 )
 
 
@@ -45,9 +46,15 @@ def index(request):
         myprofile = MyDetail.objects.filter(user=1)
     else:
         myprofile = MyDetail.objects.filter(user=request.user)
+    language_used = set()
+    for i in myprofile:
+        for j in i.projects_detail.all():
+            language_used.add(str(j.language_used))
+    print(language_used)
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
+        'language_used': language_used,
 
     }
 

@@ -6,14 +6,15 @@
         </div>
         <div class="button-group">
             <button type="button" name="button" id="btn1" class="all active" data-filter="*">All</button>
-            <button type="button" name="button" data-filter=".python" class="">Python</button>
-            <button type="button" name="button" data-filter=".java" class="">Java</button>
+            {% for language in language_used %}
+                <button type="button" name="button" data-filter=".{{language|lower}}" class="">{{language|capfirst}}</button>
+            {% endfor %}
             <button type="button" name="button" data-filter=".upcomming" class="">upcomming</button>
         </div>
         <div class="row grid">
             {% for projects in myprofile %}
                 {% for project in projects.projects_detail.all %}
-            <div class="col-lg-4 col-md-6 col-sm-12  element-item {{project.technology_used|lower}}">
+            <div class="col-lg-4 col-md-6 col-sm-12  element-item {{project.language_used|lower}}">
                 <div class="our-project">
                     <div class="img">
                         <a class="text-popup-link" href="/media/{{project.image}}">

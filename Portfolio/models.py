@@ -3,22 +3,33 @@ from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 
 
+class Language(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 # Create your models here.
 class Project(models.Model):
     name = models.CharField(max_length=128)
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    technology_used = models.CharField(max_length=500)
+    language_used = models.ForeignKey(Language, on_delete=models.CASCADE, default="", null=True, unique=False)
     framework_used = models.CharField(max_length=500, null=True, blank=True)
+    technologies_used = models.TextField(help_text="like Databases,Front-End,API's etc", null=True,
+                                         blank=True)
     description = models.TextField(max_length=500)
     github_link = models.URLField(blank=True, null=True)
     web_link = models.URLField(blank=True, null=True)
     image = models.ImageField(upload_to='images/')
+    slug = models.SlugField(allow_unicode=True, default="", editable=False)
+    created_date = models.DateTimeField(auto_now_add=True, null=True)
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
             if field.name == "image":
                 field.upload_to = f"images/Projects/"
-
+        self.slug = slugify(self.name + self.language_used.name + str(self.created_date))
         super().save(*args, **kwargs)
 
     def __str__(self):
