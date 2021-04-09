@@ -2,9 +2,6 @@
 .title-text{
   font:normal bold 50px/72px var(--roboto);
 }
-.text-uppercase{
-  text-transform: uppercase;
-}
 /* buttons */
 
 .button{
@@ -72,4 +69,55 @@ button:focus,button:active button:hover .btn:active, .btn.active{
   z-index: 999;
   /* height: 10%; */
   transition: .4s ease;
+}
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.fa-facebook{
+    color: #3b5998;
+    background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
+    background-size: 55%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+}
+.facebook:hover{
+    color: #3b5998 !important;
+    background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
+    background-size: 55%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+}
+.instagram:hover{
+  color: transparent !important;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.fa-linkedin {
+    color: #0a66c2;
+    background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
+    background-size: 55%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+}
+.linkedin:hover {
+    color: #0a66c2 !important;
+    background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
+    background-size: 55%;
+    background-position: 70% 0;
+    background-repeat: no-repeat;
+}
+.hackerrank:hover{
+    color:#2ec866 !important;
+}
+.fa-stack-overflow:hover{
+    color:#f48024 !important;
+}
+.fa-github:hover{
+    color:#343a40 !important;
 }

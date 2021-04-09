@@ -1,174 +1,144 @@
-    @import url("/static/portfolio/css/partials/variables.css");
-    section {
-        position: relative;
-        min-height: 100vh;
-        /* background-color: #60ebff; */
-        background-image: url(/static/portfolio/images/subscribe-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 20px;
+@import url("/static/portfolio/css/partials/variables.css");
+section {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(/static/portfolio/images/subscribe-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+section .container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+section .container .user {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section .container .user .imgBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #60ebff;
+    transition: 0.5s;
+}
+
+section .container .user .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+}
+
+section .container .user .formBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+section .container .user .formBox form h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+section .container .user .formBox form h1 {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 14px;
+    text-shadow: var(--box-shadow);
+}
+
+section .container .user .formBox form input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    color: #333;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+section .container .user .formBox form input[type='submit'] {
+    max-width: 100px;
+    background: #677eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .5s;
+    border-bottom: 4px solid #394cb8;
+}
+
+section .container .user .formBox form input[type='submit']:focus {
+    max-width: 80px;
+    font-size: 10px;
+}
+
+section .container .user .formBox form .divider {
+    position: relative;
+    min-width: 200px;
+    height: 1px;
+    background: #888;
+}
+
+section .container .user .formBox form span {
+    position: absolute;
+    right: 10px;
+    padding: 0 8px;
+}
+
+section .container .user .formBox form .divider span {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    left: 45%;
+    width: 30px;
+    text-align: center;
+    background-color: #fff;
+}
+
+section .container .user .formBox form .social-auth a {
+    font-size: 40px;
+    padding: 0 20px;
+    color: #555;
+}
+
+@media (max-width: 576px) {
+    .formBox {
+        width: 100%  !important;
     }
-    
-    section .container {
-        position: relative;
-        width: 800px;
-        height: 500px;
-        background: #fff;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        border-radius: 10px;
-    }
-    
-    section .container .user {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-    }
-    
-    section .container .user .imgBox {
-        position: relative;
-        width: 50%;
-        height: 100%;
-        background: #60ebff;
-        ;
-        /* background-image: url(/static/portfolio/images/subscribe-bg.png); */
-        transition: 0.5s;
-    }
-    
-    section .container .user .imgBox img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 40px 20px;
-    }
-    
-    section .container .user .formBox {
-        position: relative;
-        width: 50%;
-        height: 100%;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        padding: 40px;
-        transition: 0.5s;
-    }
-    
-    section .container .user .formBox form h2 {
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 10px;
-        color: #555;
-    }
-    
-    section .container .user .formBox form h1 {
-        font-size: 35px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: center;
-        color: #555;
-        margin-bottom: 14px;
-        text-shadow: var(--box-shadow);
-    }
-    
-    section .container .user .formBox form input {
-        position: relative;
-        width: 100%;
-        padding: 10px;
-        background: #f5f5f5;
-        color: #333;
-        border: none;
-        /* border: 1px solid #555; */
-        /* border-radius: 4px; */
-        outline: none;
-        box-shadow: none;
-        margin: 8px 0;
-        font-size: 14px;
-        letter-spacing: 1px;
-        font-weight: 300;
-    }
-    
-    section .container .user .formBox form input[type='submit'] {
-        max-width: 100px;
-        background: #677eff;
-        color: #fff;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        transition: .5s;
-        border-bottom: 4px solid #394cb8;
-    }
-    
-    section .container .user .formBox form input[type='submit']:focus {
-        max-width: 80px;
-        font-size: 10px;
-    }
-    
-    section .container .user .formBox form .divider {
-        position: relative;
-        min-width: 200px;
-        /* max-width: 200px; */
-        height: 1px;
-        background: #888;
-    }
-    
-    section .container .user .formBox form span {
-        position: absolute;
-        right: 10px;
-        padding: 0 8px;
-    }
-    
-    section .container .user .formBox form .divider span {
-        display: inline-block;
-        position: absolute;
-        top: -13px;
-        left: 45%;
-        width: 30px;
-        text-align: center;
-        background-color: #fff;
-    }
-    
-    section .container .user .formBox form .social-auth a {
-        font-size: 40px;
-        padding: 0 20px;
-        color: #555;
-    }
-    
-    .fa-google {
-        background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .fa-facebook {
-        color: #3b5998;
-        background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
-        background-size: 55%;
-        background-position: 70% 0;
-        background-repeat: no-repeat;
-    }
-    
-    .fa-linkedin {
-        color: #0a66c2;
-        background-image: linear-gradient( to bottom, transparent 20%, white 20%, white 93%, transparent 93%);
-        background-size: 55%;
-        background-position: 70% 0;
-        background-repeat: no-repeat;
-    }
-    
-    @media (max-width: 576px) {
-        .formBox {
-            width: 100%  !important;
-        }
-    }
+}

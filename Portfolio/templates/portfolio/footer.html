@@ -4,23 +4,33 @@
             <h5 class="text-uppercase">Follow ME</h5>
             {% for link in myprofile %}
             {% if link.social_site_connection_details.facebook %}
-            <a href="{{link.social_site_connection_details.facebook}}" target="-_blank"><i class="fab fa-facebook"></i></a>
+            <a href="{{link.social_site_connection_details.facebook}}" target="-_blank" class="text-decoration-none">
+                <i class="fab fa-facebook facebook"></i>
+            </a>
             {% endif %}
             {% if link.social_site_connection_details.instagram %}
-            <a href="{{link.social_site_connection_details.instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="{{link.social_site_connection_details.instagram}}" target="_blank" class="text-decoration-none">
+                <i class="fab fa-instagram instagram"></i>
+            </a>
             {% endif %}
             {% if link.social_site_connection_details.linkedIn %}
-            <a href="{{link.social_site_connection_details.linkedIn}}" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
+            <a href="{{link.social_site_connection_details.linkedIn}}" target="_blank" class="text-decoration-none">
+                <i class="fab fa-linkedin linkedin"></i></a>
             {% endif %}
             {% if link.social_site_connection_details.hackerrank %}
-            <a href="{{link.social_site_connection_details.hackerrank}}" target="_blank"><i class="fab fa-hackerrank"></i></a>
+            <a href="{{link.social_site_connection_details.hackerrank}}" target="_blank" class="text-decoration-none">
+                <i class="fab fa-hackerrank hackerrank"></i>
+            </a>
             {% endif %}
             {% if link.social_site_connection_details.github %}
-            <a href="{{link.social_site_connection_details.github}}" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="{{link.social_site_connection_details.github}}" target="_blank" class="text-decoration-none">
+                <i class="fab fa-github"></i>
+            </a>
             {% endif %}
             {% if link.social_site_connection_details.stack_overflow %}
-            <a href="{{link.social_site_connection_details.stack_overflow}}" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            <a href="{{link.social_site_connection_details.stack_overflow}}" target="_blank" class="text-decoration-none">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
             {% endif %}
             {% endfor %}
         </div>

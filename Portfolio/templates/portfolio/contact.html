@@ -50,28 +50,38 @@ Contact Us | PORTFOLIO
                 </ul>
             </div>
             {% for link in mydetail %}
+            {% if link.social_site_connection_details %}
             <div class="row">
+                {% if link.social_site_connection_details.facebook %}
                 <div class="col">
                     <a href="{{link.social_site_connection_details.facebook}}" class="text-decoration-none">
                         <i class="fa fa-facebook-square text-white" aria-hidden="true"></i>
                     </a>
                 </div>
+                {% endif %}
+                {% if link.social_site_connection_details.linkedIn %}
                 <div class="col">
                     <a href="{{link.social_site_connection_details.linkedIn}}" class="text-decoration-none">
                         <i class="fa fa-linkedin-square text-white" aria-hidden="true"></i>
                     </a>
                 </div>
+                {% endif %}
+                {% if link.social_site_connection_details.hackerrank %}
                 <div class="col">
                     <a href="{{link.social_site_connection_details.hackerrank}}" class="text-decoration-none">
                         <i class="fab fa-hackerrank text-white" aria-hidden="true"></i>
                     </a>
                 </div>
+                {% endif %}
+                {% if link.social_site_connection_details.instagram %}
                 <div class="col">
                     <a href="{{link.social_site_connection_details.instagram}}" class="text-decoration-none">
                         <i class="fa fa-instagram text-white" aria-hidden="true"></i>
                     </a>
                 </div>
+                {% endif %}
             </div>
+            {% endif %}
             {% endfor %}
         </div>
         <div class="contactForm">

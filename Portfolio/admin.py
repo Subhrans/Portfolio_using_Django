@@ -4,7 +4,6 @@ from .models import (MyDetail,
                      Achievment,
                      Social_Site_Connection,
                      Subscribe,
-                     Pics,
                      ContactUs,
                      MailBackend,
                      )
@@ -21,7 +20,6 @@ class MyDetailAdmin(admin.ModelAdmin):
 
 admin.site.register(Project)
 admin.site.register(Achievment)
-admin.site.register(Pics)
 admin.site.register(Subscribe)
 admin.site.register(Social_Site_Connection)
 admin.site.register(ContactUs)

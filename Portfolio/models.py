@@ -59,29 +59,30 @@ class Achievment(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
 
-class Pics(models.Model):
-    OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)
-    alternative_text = models.CharField(max_length=40, default="")
-
-    class Meta:
-        verbose_name_plural = "Pics"
-
-    def save(self, *args, **kwargs):
-        for field in self._meta.fields:
-            if field.name == "OptionalPic":
-                field.upload_to = f"images/OptionalPic/"
-        super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.alternative_text
+# class Pics(models.Model):
+#     OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)
+#     alternative_text = models.CharField(max_length=40, default="")
+#
+#     class Meta:
+#         verbose_name_plural = "Pics"
+#
+#     def save(self, *args, **kwargs):
+#         for field in self._meta.fields:
+#             if field.name == "OptionalPic":
+#                 field.upload_to = f"images/OptionalPic/"
+#         super().save(*args, **kwargs)
+#
+#     def __str__(self):
+#         return self.alternative_text
 
 
 class MyDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     tell_about_me_your_self = models.TextField(max_length=500)
     profile_pic = models.ImageField(default="", upload_to="media/images/")
-    alternative_text = models.CharField(max_length=40, default="")
-    optional_pic = models.ForeignKey(Pics, on_delete=models.CASCADE, null=True, blank=True)
+    profile_alternative_text = models.CharField(max_length=40, default="")
+    optional_pic = models.ImageField(upload_to="images/", blank=True, null=True)
+    optional_alternative_text = models.CharField(max_length=40, default="about-my-image", editable=False)
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
     resume = models.FileField(upload_to="Resume/", null=True, blank=True)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
@@ -95,6 +96,8 @@ class MyDetail(models.Model):
         for field in self._meta.fields:
             if field.name == "profile_pic":
                 field.upload_to = f"images/{self.user.username}/ProfilePic/"
+            if field.name == "OptionalPic":
+                field.upload_to = f"images/{self.user.username}/OptionalPic/"
             if field.name == "resume":
                 field.upload_to = f"Resume/{self.user.username}/"
 
@@ -130,11 +133,12 @@ class ContactUs(models.Model):
 class MailBackend(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     gmail = models.EmailField(default="")
-    password = models.CharField(max_length=200, verbose_name="App Password (gmail)")
+    password = models.CharField(max_length=200, verbose_name="App Password (gmail)",
+                                help_text="(Note): If You Dont't Have gmail App Password, Create that first else sending email is not being processed")
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "Contact Us Backend"
+        verbose_name_plural = "Mail Backend"
 
     def __str__(self):
         return self.user.username
