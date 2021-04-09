@@ -13,19 +13,19 @@
               <a class="nav-link" href="{% url 'portfolio:index' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-area">About</a>
+              <a class="nav-link" href="{% url 'portfolio:index' %}{% if not name %}#about-area{% endif %}">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#resume">Resume</a>
+              <a class="nav-link" href="{% url 'portfolio:index' %}{% if not name %}#resume {% endif %}">Resume</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#project-area">Projects</a>
+              <a class="nav-link" href="{% url 'portfolio:index' %}{% if not name %}#project-area{% endif %}">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="{% url 'portfolio:index' %}{% if not name %}#{% endif %}">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="{% url 'portfolio:index' %}{% if not name %}#{% endif %}">Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'portfolio:contact_us' %}">Contact</a>

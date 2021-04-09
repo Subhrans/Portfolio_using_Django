@@ -19,10 +19,14 @@ class MyDetailAdmin(admin.ModelAdmin):
     # prepopulated_fields = {"url":('id',)}
 
 
-# admin.site.register(MyDetail)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ['name', 'id', 'slug']
+    list_display_links = ['name', 'id', 'slug']
+    # prepopulated_fields = {"slug":('name','language_used','created_date')}
 
 
-admin.site.register(Project)
+admin.site.register(Project, ProjectAdmin)
+
 admin.site.register(Language)
 admin.site.register(Achievment)
 admin.site.register(Subscribe)
