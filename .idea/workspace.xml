@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="created Language model">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="navbar fixed in subscribe successful">
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/Worksheet_6 dabi.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe_successful.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe_successful.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe_successful_navbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -631,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617976374786</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="navbar fixed in subscribe successful">
+      <created>1617977902932</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1617977902932</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="sending email error" />
     <MESSAGE value="almost done" />
     <MESSAGE value="adding requirements and subscribe_navbar" />
     <MESSAGE value="Added github_links and web_links" />
@@ -687,7 +691,8 @@
     <MESSAGE value="allauth setup not done" />
     <MESSAGE value="removed optional pic &amp; adding colors to social icon" />
     <MESSAGE value="created Language model" />
-    <option name="LAST_COMMIT_MESSAGE" value="created Language model" />
+    <MESSAGE value="navbar fixed in subscribe successful" />
+    <option name="LAST_COMMIT_MESSAGE" value="navbar fixed in subscribe successful" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
