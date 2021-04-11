@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load static %}
+{% block title %}
+Login | PORTFOLIO
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'portfolio/css/login.css' %}">
+{% endblock %}
+{% block content %}
+{% include 'portfolio/navbar.html' %}
+{% include "socialaccount/snippets/login_extra.html" %}
+
+{% get_providers as socialaccount_providers %}
+<section class="d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="user signBox d-flex flex-row justify-content-center">
+            <div class="imgBox d-none d-sm-block">
+                <img src="/static/portfolio/images/undraw_unlock_24mb.svg" alt="">
+            </div>
+            <div class="formBox">
+                <form action="{% url 'account_login' %}" method="POST">
+
+                    <h1>Portfolio</h1>
+                    <h2>Sign In </h2>
+                    {% for i in messages %}
+                    <div class="alert-danger px-2">{{i}}</div>
+                    {% endfor %}
+                    {% for i in form %}
+                    {% csrf_token %}
+                    {% if forloop.counter != 3 %}
+                    {{i}}
+                    {% endif %}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+                    {% endfor %}
+                    <input type="submit">
+                    <p class="mt-1"><a href="{% url 'account_reset_password' %}">Forgot Password ?</a></p>
+                    <p class="signup text-dark">Don't have an Account ?
+                        <a href="{{ signup_url }}" class="text-decoration-none">
+                            Sign Up
+                        </a>
+                    </p>
+                    <div class="divider">
+                        <span>Or</span>
+                    </div>
+                    <div class="social-auth d-flex justify-content-center mt-3">
+                        <a href="/accounts/facebook/login/?process=login"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="/accounts/google/login/?process=login"><i
+                                class="fab fa-google"></i></a>
+                        <a href="/accounts/linkedin_oauth2/login/?process=login"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+{% endblock %}

@@ -37,10 +37,10 @@ class ContactUsForm(forms.ModelForm):
         }
 
 
-class ContactBackendForm(forms.ModelForm):
-    class Meta:
-        model = MailBackend
-        fields = ['user', 'gmail', 'password']
+# class ContactBackendForm(forms.ModelForm):
+#     class Meta:
+#         model = MailBackend
+#         fields = ['user', 'gmail', 'password']
 
 
 class LoginForm(AuthenticationForm):

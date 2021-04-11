@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from allauth.account.signals import email_confirmed
+
+
+def email_confirmed_receiver(request, email_address, **kwargs):
+    pass
 
 
 class Language(models.Model):
@@ -13,7 +18,7 @@ class Language(models.Model):
 # Create your models here.
 class Project(models.Model):
     name = models.CharField(max_length=128)
-    # user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, editable=False)
     language_used = models.ForeignKey(Language, on_delete=models.CASCADE, default="", null=True, unique=False)
     framework_used = models.CharField(max_length=500, null=True, blank=True)
     technologies_used = models.TextField(help_text="like Databases,Front-End,API's etc", null=True,
@@ -37,7 +42,7 @@ class Project(models.Model):
 
 
 class Social_Site_Connection(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     github = models.URLField(null=True, blank=True)
     facebook = models.URLField(default="")
     instagram = models.URLField(null=True, blank=True)
@@ -58,7 +63,7 @@ expiry_date_choices = (
 
 
 class Achievment(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     event_name = models.CharField(max_length=128)
     enrolled_in = models.DateField()
     finished_in = models.DateField()
@@ -88,7 +93,7 @@ class Achievment(models.Model):
 
 
 class MyDetail(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     tell_about_me_your_self = models.TextField(max_length=500)
     profile_pic = models.ImageField(default="", upload_to="media/images/")
     profile_alternative_text = models.CharField(max_length=40, default="")
@@ -121,6 +126,7 @@ class MyDetail(models.Model):
 
 
 class Subscribe(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, editable=False)
     name = models.CharField(max_length=128)
     email = models.EmailField()
 
@@ -129,6 +135,7 @@ class Subscribe(models.Model):
 
 
 class ContactUs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, editable=False)
     first_name = models.CharField(max_length=128)
     last_name = models.CharField(max_length=128)
     email = models.EmailField()
@@ -142,7 +149,7 @@ class ContactUs(models.Model):
 
 
 class MailBackend(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     gmail = models.EmailField(default="")
     password = models.CharField(max_length=200, verbose_name="App Password (gmail)",
                                 help_text="(Note): If You Dont't Have gmail App Password, Create that first else sending email is not being processed")
