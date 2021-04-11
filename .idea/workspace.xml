@@ -1,51 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="navbar fixed in subscribe successful">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0028_project_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0029_auto_20210411_1808.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/account_inactive.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/base_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/email_confirmation_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/email_confirmation_signup_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/email_confirmation_signup_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/email_confirmation_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/password_reset_key_message.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email/password_reset_key_subject.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/email_confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/cannot_delete_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/email_confirmed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/email_deleted.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/logged_in.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/logged_out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/password_changed.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/password_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/primary_email_set.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_change.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_reset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_reset_from_key.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_reset_from_key_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/password_set.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/signup_closed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/snippets/already_logged_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/verification_sent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/templates/account/verified_email_required.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="fixed cv url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,13 +296,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1608413375696</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608413375696</updated>
     </task>
     <task id="LOCAL-00002" summary="initial commit">
       <created>1608459190656</created>
@@ -682,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618072797228</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="different user can see own data">
+      <created>1618145230257</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1618145230262</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -713,8 +671,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding requirements and subscribe_navbar" />
-    <MESSAGE value="Added github_links and web_links" />
     <MESSAGE value="cv download hire me" />
     <MESSAGE value="fixed navbar" />
     <MESSAGE value="remove comments from settings" />
@@ -738,7 +694,9 @@
     <MESSAGE value="created Language model" />
     <MESSAGE value="navbar fixed in subscribe successful" />
     <MESSAGE value="django allauth problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="django allauth problem" />
+    <MESSAGE value="different user can see own data" />
+    <MESSAGE value="fixed cv url" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed cv url" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
