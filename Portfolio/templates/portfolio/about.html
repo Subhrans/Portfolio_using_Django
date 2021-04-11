@@ -23,10 +23,12 @@
                         {{mydetail.tell_about_me_your_self|slice:'60:'}}
                     </p>
                 </div>
+                {% if mydetail.resume %}
                 <a href="{{mydetail.resume.url}}" id="resume" class="btn button primary-button text-uppercase"
                    download="{{mydetail.resume.url}}">
                     Download CV
                 </a>
+                {% endif %}
             </div>
             {% endif %}
         </div>
