@@ -23,35 +23,30 @@ class UserModifiedAdmin(UserAdmin):
             return self.add_fieldsets
         if request.user.is_superuser:
             important_dates = ('last_login', 'date_joined')
+            permissions = ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')
+            permissions_text = "Permissions"
             # readonly_fields = ('username', 'last_login', 'date_joined')
+
         else:
             important_dates = ('last_login', 'date_joined')
+            permissions = ()
+            permissions_text = None
             # readonly_fields = ('username', 'last_login', 'date_joined')
         return [(None, {
-                'fields': ('username', 'password'),
-            }),
-            ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
-                ('Permissions', {
-                    'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
+            'fields': ('username', 'password'),
+        }),
+                ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
+                (permissions_text, {
+                    'fields': permissions,
                 }),
                 ('Important dates', {'fields': important_dates}), ]
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             readonly_fields = ()
-            return readonly_fields
         else:
-            readonly_fields = ('username', 'last_login','email', 'date_joined')
-            return readonly_fields
-        # fieldsets = (
-        #     (None, {
-        #         'fields': ('username', 'password'),
-        #     }),
-        #     ('important dates', {
-        #         'fields': ('last_login', 'date_joined'),
-        #     })
-        # )
-        # readonly_fields = ('username','last_login','date_joined')
+            readonly_fields = ('username', 'last_login', 'email', 'date_joined')
+        return readonly_fields
 
     def get_queryset(self, request):
         qs = super(UserModifiedAdmin, self).get_queryset(request)

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="user can view only own data">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="applied readonly for staff users" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -297,13 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Adding templates, static files inside application and rendering those using view function and its successfully worked.">
-      <created>1609085389890</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1609085389890</updated>
     </task>
     <task id="LOCAL-00006" summary="Adding navbar">
       <created>1609172758293</created>
@@ -641,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618247008777</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="applied readonly for staff users">
+      <created>1618250207936</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1618250207936</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -672,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="remove comments from settings" />
     <MESSAGE value="decouple" />
     <MESSAGE value="decouple on privacy" />
     <MESSAGE value="changed title" />
@@ -697,7 +691,8 @@
     <MESSAGE value="fixed cv url" />
     <MESSAGE value="fixed user table from customer user" />
     <MESSAGE value="user can view only own data" />
-    <option name="LAST_COMMIT_MESSAGE" value="user can view only own data" />
+    <MESSAGE value="applied readonly for staff users" />
+    <option name="LAST_COMMIT_MESSAGE" value="applied readonly for staff users" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
