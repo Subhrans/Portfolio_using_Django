@@ -106,8 +106,10 @@ class Achievment(models.Model):
 
 
 class MyDetail(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False, db_index=True)
     tell_about_me_your_self = models.TextField(max_length=500)
+    profession = models.CharField(max_length=50, default="",
+                                  help_text="Example: Front-End Developer, Back-End Developer etc.")
     profile_pic = models.ImageField(default="", upload_to="media/images/")
     profile_alternative_text = models.CharField(max_length=40, default="")
     optional_pic = models.ImageField(upload_to="images/", blank=True, null=True)
@@ -118,7 +120,6 @@ class MyDetail(models.Model):
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
     contact_number = models.CharField(max_length=16, default="",
                                       help_text="(Hint) add spaces for format the number as mine")
-    url = models.URLField(default="", editable=False)
     slug = models.SlugField(allow_unicode=True, editable=False, default="")
 
     def save(self, *args, **kwargs):
@@ -131,7 +132,6 @@ class MyDetail(models.Model):
                 field.upload_to = f"Resume/{self.user.username}/"
 
         self.slug = slugify(self.user)
-        self.url = self.slug
         super().save(*args, **kwargs)
 
     def __str__(self):

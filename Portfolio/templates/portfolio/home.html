@@ -5,54 +5,58 @@
 
 {% endblock %}
 {% block owncss %}
-    <style type="text/css">
+<style type="text/css">
 
-    </style>
+</style>
 {% endblock %}
 {% block content %}
-    {% include 'portfolio/navbar.html' %}
-    <main class="site-main">
-        {% for mydetail in myprofile %}
-        <section class="site-banner">
+{% include 'portfolio/navbar.html' %}
+<main class="site-main">
+    {% for mydetail in myprofile %}
+    <section class="site-banner">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 site-title">
-              <h3 class="title-text">Hey</h3>
-              <h1 class="title-text text-uppercase"> I am {{mydetail.user.first_name}}</h1>
-              <h4 class="title-text text-uppercase">Django Full Stack Developer</h4>
-                {% if mydetail.resume %}
-              <div class="site-buttons">
-                <div class="d-flex flex-row flex-wrap">
-                  <button type="button" name="button" data-toggle="modal" data-target="#HireMe" class="btn button primary-button mr-4 text-uppercase">Hire me</button>
-                  <a type="button" name="button" href="{{mydetail.resume.url}}" class="btn button secondary-button text-uppercase" download="{{mydetail.resume.url}}">Get CV</a>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 site-title">
+                    <h3 class="title-text">Hey</h3>
+                    <h1 class="title-text text-uppercase"> I am {{mydetail.user.first_name}}</h1>
+                    <h4 class="title-text text-uppercase">{{mydetail.profession}}</h4>
+                    {% if mydetail.resume %}
+                    <div class="site-buttons">
+                        <div class="d-flex flex-row flex-wrap">
+                            <button type="button" name="button" data-toggle="modal" data-target="#HireMe"
+                                    class="btn button primary-button mr-4 text-uppercase">Hire me
+                            </button>
+                            <a type="button" name="button" href="{{mydetail.resume.url}}"
+                               class="btn button secondary-button text-uppercase" download="{{mydetail.resume.url}}">Get
+                                CV</a>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
-              </div>
-                {% endif %}
+                <div class="col-lg-6 col-md-6">
+                    <img src="/media/{{mydetail.profile_pic}}" alt="{{mydetail.alternative_text}}" class="img-fluid">
+                </div>
             </div>
-            <div class="col-lg-6 col-md-6">
-              <img src="/media/{{mydetail.profile_pic}}" alt="{{mydetail.alternative_text}}" class="img-fluid">
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-        <!--    About Area  -->
-        {% include 'portfolio/about.html' %}
-        <!--    End About Area  -->
+    <!--    About Area  -->
+    {% include 'portfolio/about.html' %}
+    <!--    End About Area  -->
 
-        <!-- project area -->
-        {% include 'portfolio/project.html' %}
-        <!-- end project area -->
+    <!-- project area -->
+    {% include 'portfolio/project.html' %}
+    <!-- end project area -->
 
-        <!--    Subscribe Area  -->
-        {% include 'portfolio/subscribe.html' %}
-        <!--    End Subscribe Area  -->
+    <!--    Subscribe Area  -->
+    {% include 'portfolio/subscribe.html' %}
+    <!--    End Subscribe Area  -->
 
-        <!-- footer area -->
-        {% include 'portfolio/footer.html' %}
-        <!-- end footer area -->
-        {% endfor %}
-        {% include 'portfolio/hire_me.html' %}
-    </main>
+    <!-- footer area -->
+    {% include 'portfolio/footer.html' %}
+    <!-- end footer area -->
+    {% endfor %}
+    {% include 'portfolio/hire_me.html' %}
+</main>
 
 {% endblock %}

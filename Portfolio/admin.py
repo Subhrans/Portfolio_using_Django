@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
 
@@ -14,6 +13,7 @@ from .models import (MyDetail,
                      )
 
 # Register your models here.
+
 admin.site.unregister(User)
 
 
@@ -59,7 +59,7 @@ class UserModifiedAdmin(UserAdmin):
 @admin.register(MyDetail)
 class MyDetailAdmin(admin.ModelAdmin):
     # fields = ['id','url']
-    list_display = ['id', 'user', 'slug', 'url']
+    list_display = ['id', 'user', 'slug']
     list_display_links = ['id', 'user', 'slug']
 
     # prepopulated_fields = {"url":('id',)}
@@ -140,7 +140,7 @@ class SubscribeAdmin(admin.ModelAdmin):
 
 
 @admin.register(Social_Site_Connection)
-class Social_Site_ConnectionAdmin(admin.ModelAdmin):
+class SocialSiteConnectionAdmin(admin.ModelAdmin):
     list_display = ['user']
     list_display_links = ['user']
 
@@ -149,7 +149,7 @@ class Social_Site_ConnectionAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
     def get_queryset(self, request):
-        qs = super(Social_Site_ConnectionAdmin, self).get_queryset(request)
+        qs = super(SocialSiteConnectionAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return qs
         return qs.filter(user=request.user)
