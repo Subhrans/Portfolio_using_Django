@@ -130,6 +130,9 @@ class MyDetail(models.Model):
     def __str__(self):
         return ("{} " + "{}").format(self.user.first_name, self.user.last_name)
 
+    # class Meta:
+    #     permissions =[('')]
+
 
 class Subscribe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1, editable=False)

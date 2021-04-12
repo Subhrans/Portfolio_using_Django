@@ -18,11 +18,40 @@ admin.site.unregister(User)
 
 @admin.register(User)
 class UserModifiedAdmin(UserAdmin):
-    pass
+    def get_fieldsets(self, request, obj=None):
+        if not obj:
+            return self.add_fieldsets
+        if request.user.is_superuser:
+            important_dates = ('last_login', 'date_joined')
+            # readonly_fields = ('username', 'last_login', 'date_joined')
+        else:
+            important_dates = ('last_login', 'date_joined')
+            # readonly_fields = ('username', 'last_login', 'date_joined')
+        return [(None, {
+                'fields': ('username', 'password'),
+            }),
+            ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
+                ('Permissions', {
+                    'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),
+                }),
+                ('Important dates', {'fields': important_dates}), ]
 
-    # fieldsets = ('permissions',{
-    #     'fields':('is_active',),
-    # }),
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            readonly_fields = ()
+            return readonly_fields
+        else:
+            readonly_fields = ('username', 'last_login','email', 'date_joined')
+            return readonly_fields
+        # fieldsets = (
+        #     (None, {
+        #         'fields': ('username', 'password'),
+        #     }),
+        #     ('important dates', {
+        #         'fields': ('last_login', 'date_joined'),
+        #     })
+        # )
+        # readonly_fields = ('username','last_login','date_joined')
 
     def get_queryset(self, request):
         qs = super(UserModifiedAdmin, self).get_queryset(request)
