@@ -51,7 +51,20 @@ navbarFixed();
        $('.subscribe-us-area .subscribe').addClass('container');
     }
 });
-
+$('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1,
+            center:true,
+        },
+        600:{
+            items:3
+        },
+    }
+});
   // ==== Magnific Popup =====
   // $('.first-img').magnificPopup({type:'image'});
 });

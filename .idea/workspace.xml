@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="registered user added into groups">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="removed url field and add profession field">
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/18157.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/Wavy_Bus-10_Single-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/Wavy_Tech-01_Single-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/icons/illustration-web-design.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/icons/web-design-production-maintenance-websites-web-graphic-interface-design-responsive-website-software-engineering-development-colorful-icon.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/icons/web-page-visualization-protocol-procedure-dynamic-software-workflow-full-stack-development-markup-administrate-system-driver-shared-memory-vector-isolated-concept-m.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/_images_about-us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,13 +306,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fixing navbar 2">
-      <created>1609238616969</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609238616969</updated>
     </task>
     <task id="LOCAL-00009" summary="adding subscribe in model.py as well as forms.py file">
       <created>1609239725139</created>
@@ -642,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618259622409</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="removed url field and add profession field">
+      <created>1618260976089</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1618260976089</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -673,7 +681,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed title" />
     <MESSAGE value="contact form" />
     <MESSAGE value="fixed subscribe button" />
     <MESSAGE value="contact section color changed" />
@@ -698,7 +705,8 @@
     <MESSAGE value="applied readonly for staff users" />
     <MESSAGE value="removed permission view from staff users" />
     <MESSAGE value="registered user added into groups" />
-    <option name="LAST_COMMIT_MESSAGE" value="registered user added into groups" />
+    <MESSAGE value="removed url field and add profession field" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed url field and add profession field" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
