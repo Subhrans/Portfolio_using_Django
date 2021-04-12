@@ -1,11 +1,18 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
+from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 from allauth.account.signals import email_confirmed
 
 
-def email_confirmed_receiver(request, email_address, **kwargs):
-    pass
+@receiver(email_confirmed)
+def email_confirmed_(request, email_address, **kwargs):
+    user = User.objects.get(email=email_address.email)
+    group_obj = Group.objects.get(name="portfolio_user")
+    user.is_active = True
+    user.is_staff = True
+    user.groups.add(group_obj)
+    user.save()
 
 
 class Language(models.Model):
@@ -129,9 +136,6 @@ class MyDetail(models.Model):
 
     def __str__(self):
         return ("{} " + "{}").format(self.user.first_name, self.user.last_name)
-
-    # class Meta:
-    #     permissions =[('')]
 
 
 class Subscribe(models.Model):
