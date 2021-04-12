@@ -18,6 +18,12 @@ admin.site.unregister(User)
 
 @admin.register(User)
 class UserModifiedAdmin(UserAdmin):
+    pass
+
+    # fieldsets = ('permissions',{
+    #     'fields':('is_active',),
+    # }),
+
     def get_queryset(self, request):
         qs = super(UserModifiedAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -28,7 +34,7 @@ class UserModifiedAdmin(UserAdmin):
 @admin.register(MyDetail)
 class MyDetailAdmin(admin.ModelAdmin):
     # fields = ['id','url']
-    list_display = ['id', 'url', 'user', 'slug']
+    list_display = ['id', 'user', 'slug', 'url']
     list_display_links = ['id', 'user', 'slug']
 
     # prepopulated_fields = {"url":('id',)}
@@ -41,6 +47,18 @@ class MyDetailAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return qs
         return qs.filter(user=request.user)
+
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name == "projects_detail":
+            kwargs["queryset"] = Project.objects.filter(user=request.user)
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "social_site_connection_details":
+            kwargs['queryset'] = Social_Site_Connection.objects.filter(user=request.user)
+        if db_field.name == "achievment_details":
+            kwargs['queryset'] = Achievment.objects.filter(user=request.user)
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
 
 class ProjectAdmin(admin.ModelAdmin):

@@ -74,6 +74,12 @@ class Achievment(models.Model):
     certificate_url = models.URLField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.event_name
+
+    class Meta:
+        unique_together = ('user', "event_name")
+
 
 # class Pics(models.Model):
 #     OptionalPic = models.ImageField(upload_to="images/", blank=True, null=True)

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="fixed user table from customer user">
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0030_auto_20210411_1845.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Acievments/firefox_design.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/about-us.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,20 +300,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00002" summary="initial commit">
-      <created>1608459190656</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1608459190656</updated>
-    </task>
-    <task id="LOCAL-00003" summary="initial commit">
-      <created>1609083852204</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1609083852204</updated>
     </task>
     <task id="LOCAL-00004" summary="Adding master.css, base.html, app urls.py and making view funcition for showing base.html and some changes in settings.py">
       <created>1609084489476</created>
@@ -638,7 +630,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618145230262</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="fixed user table from customer user">
+      <created>1618146726765</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1618146726765</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fixed user table from customer user">
+      <created>1618146766780</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1618146766780</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -669,7 +675,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="cv download hire me" />
     <MESSAGE value="fixed navbar" />
     <MESSAGE value="remove comments from settings" />
     <MESSAGE value="decouple" />
@@ -694,7 +699,8 @@
     <MESSAGE value="django allauth problem" />
     <MESSAGE value="different user can see own data" />
     <MESSAGE value="fixed cv url" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed cv url" />
+    <MESSAGE value="fixed user table from customer user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed user table from customer user" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
