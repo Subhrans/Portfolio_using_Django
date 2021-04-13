@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="added services model and admin">
-      <change afterPath="$PROJECT_DIR$/media/images/joy/Services/Wavy_Tech-01_Single-10.jpg" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="added services into services page">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0036_auto_20210413_2139.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/example_url.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/Acievments/subscribe-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/undraw_unlock_24mb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/pal/ProfilePic/portfolio_pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/pal/ProfilePic/portfolio_pic_GuL0r0f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/pal/Services/subscribe-bg.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
@@ -300,13 +308,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00013" summary="i defined global variables in css">
-      <created>1609521213243</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1609521213243</updated>
     </task>
     <task id="LOCAL-00014" summary="i defined global variables in css">
       <created>1609523707920</created>
@@ -644,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618309192863</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="added services into services page">
+      <created>1618325207359</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1618325207360</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -675,7 +683,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Contact Backend" />
     <MESSAGE value="anonymous user default view" />
     <MESSAGE value="MailBackend" />
     <MESSAGE value="profile section add" />
@@ -700,7 +707,8 @@
     <MESSAGE value="removed URL model" />
     <MESSAGE value="search field for project section" />
     <MESSAGE value="added services model and admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="added services model and admin" />
+    <MESSAGE value="added services into services page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added services into services page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

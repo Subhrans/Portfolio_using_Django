@@ -14,6 +14,8 @@ from .models import (
     Service,
 )
 
+local_visited = False
+
 
 def index(request):
     if request.method == 'POST':
@@ -49,6 +51,13 @@ def index(request):
     else:
         myprofile = MyDetail.objects.filter(user=request.user)
         service = Service.objects.filter(user=request.user)
+        check_visited = request.session.get('visited', 'False')
+        if check_visited == "True":
+            myprofile.update(visited=True)
+        if len(myprofile) == 0:
+            request.session['visited'] = "False"
+        if len(myprofile) == 1:
+            request.session['visited'] = "True"
     language_used = set()
     for i in myprofile:
         for j in i.projects_detail.all():
@@ -61,7 +70,6 @@ def index(request):
         'service': service,
 
     }
-
     return render(request, 'portfolio/home.html', context)
 
 

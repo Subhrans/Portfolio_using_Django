@@ -15,8 +15,6 @@
                 <div class="row d-flex flex-row flex-wrap">
                     <div class="col input-textbox">
                         {{i}}
-
-                        <!--                  <input type="text" name="mail" class="form-control" placeholder="Email" value="">-->
                         {% for j in i.errors %}
                             <span class="errorlist">{{j|striptags}}</span>
                         {% endfor %}

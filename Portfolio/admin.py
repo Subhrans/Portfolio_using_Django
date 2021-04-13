@@ -70,8 +70,9 @@ class UserModifiedAdmin(UserAdmin):
 @admin.register(MyDetail)
 class MyDetailAdmin(admin.ModelAdmin):
     # fields = ['id','url']
-    list_display = ['id', 'user', 'slug', 'url']
+    list_display = ['id', 'user', 'slug', 'url','visited']
     list_display_links = ['id', 'user', 'slug']
+    # list_editable = ['visited']
 
     # prepopulated_fields = {"url":('id',)}
     def save_model(self, request, obj, form, change):

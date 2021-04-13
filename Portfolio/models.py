@@ -144,6 +144,7 @@ class MyDetail(models.Model):
                                       help_text="(Hint) add spaces for format the number as mine")
     slug = models.SlugField(allow_unicode=True, editable=False, default="")
     url = models.URLField(verbose_name="Site URL", default="", editable=False)
+    visited = models.BooleanField(default=False, editable=True)
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
