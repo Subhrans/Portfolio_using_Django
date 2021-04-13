@@ -132,13 +132,13 @@ class MyDetail(models.Model):
     profession = models.CharField(max_length=50, default="",
                                   help_text="Example: Front-End Developer, Back-End Developer etc.")
     profile_pic = models.ImageField(default="", upload_to="media/images/")
-    profile_alternative_text = models.CharField(max_length=40, default="")
+    # profile_alternative_text = models.CharField(max_length=40, default="")
     optional_pic = models.ImageField(upload_to="images/", blank=True, null=True)
-    optional_alternative_text = models.CharField(max_length=40, default="about-my-image", editable=False)
+    # optional_alternative_text = models.CharField(max_length=40, default="about-my-image", editable=False)
     social_site_connection_details = models.ForeignKey(Social_Site_Connection, on_delete=models.CASCADE)
     resume = models.FileField(upload_to="Resume/", null=True, blank=True)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
-    achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
+    achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE, null=True, blank=True)
     services = models.ManyToManyField(Service)
     contact_number = models.CharField(max_length=16, default="",
                                       help_text="(Hint) add spaces for format the number as mine")
