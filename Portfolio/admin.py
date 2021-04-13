@@ -69,7 +69,7 @@ class UserModifiedAdmin(UserAdmin):
 @admin.register(MyDetail)
 class MyDetailAdmin(admin.ModelAdmin):
     # fields = ['id','url']
-    list_display = ['id', 'user', 'slug','url']
+    list_display = ['id', 'user', 'slug', 'url']
     list_display_links = ['id', 'user', 'slug']
 
     # prepopulated_fields = {"url":('id',)}
@@ -99,6 +99,8 @@ class MyDetailAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ['name', 'id', 'slug', 'user']
     list_display_links = ['name', 'id', 'slug', 'user']
+    list_filter = ['language_used', 'created_date']
+    search_fields = ('language_used__name', 'id', 'name', 'created_date', 'user__username', 'user__email')
 
     # prepopulated_fields = {"slug":('name','language_used','created_date')}
     def save_model(self, request, obj, form, change):

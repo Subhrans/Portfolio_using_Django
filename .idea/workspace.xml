@@ -1,76 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="added services">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0032_url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0033_auto_20210413_1346.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="removed URL model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acievments/JavaScript_Coursera_TGZCSDZHBFF4_.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/_images_about-us.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/about-us.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/banner-image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/banner1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/doctor_app.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/keekers.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/library_MG.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/library_MG.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/music_player.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/portfolio_pic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/images/subscribe-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/.jshintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/dist/jquery.magnific-popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/dist/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/dist/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/libs/jquery-loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/libs/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/libs/qunit/qunit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/libs/qunit/qunit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/magnific-popup.jquery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/css/_settings.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/css/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/iframe.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/image.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/retina.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/src/js/zoom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_includes/analytics.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_includes/build-tool.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_includes/examples.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_includes/logo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_includes/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/_layouts/default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/documentation.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/site-assets/ajax/test-ajax-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/site-assets/ajax/test-ajax.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/site-assets/site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/third-party-libs/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/third-party-libs/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/third-party-libs/uglify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/third-party-libs/zepto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/third-party-libs/zepto.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/Magnific-Popup/website/wordpress.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/vendor/isotope/isotope.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,13 +295,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00010" summary="adding subscribe in model.py as well as forms.py file">
-      <created>1609347520131</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1609347520131</updated>
     </task>
     <task id="LOCAL-00011" summary="subscribe.html">
       <created>1609348301682</created>
@@ -706,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618265157671</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="removed URL model">
+      <created>1618302137224</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1618302137224</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -737,7 +670,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed subscribe button" />
     <MESSAGE value="contact section color changed" />
     <MESSAGE value="remove redundant tables" />
     <MESSAGE value="Contact Backend" />
@@ -762,7 +694,8 @@
     <MESSAGE value="registered user added into groups" />
     <MESSAGE value="removed url field and add profession field" />
     <MESSAGE value="added services" />
-    <option name="LAST_COMMIT_MESSAGE" value="added services" />
+    <MESSAGE value="removed URL model" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed URL model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
