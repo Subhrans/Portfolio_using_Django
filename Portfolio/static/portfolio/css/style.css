@@ -7,6 +7,19 @@ html{
 .header_area .main-menu .navbar .navbar-brand{
   padding:0 2rem 0 5rem;
   text-shadow: var(--box-shadow);
+  animation: slide_left 0.5s linear forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+@keyframes slide_left{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 .header_area .main-menu .navbar{
   padding:1rem 5rem;
@@ -15,12 +28,27 @@ html{
 .header_area .main-menu .nav-item .nav-link{
   padding:1.5rem;
   color: var(--title-color);
+  animation: slide_top 0.5s linear forwards;
+  animation-delay:calc(0.1s * var(--i));
+  opacity: 0;
+}
+@keyframes slide_top{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .header_area .main-menu .navbar-nav .active a{
   background: var(--gradient-color);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+  
 }
+
 .header_area .main-menu .navbar-nav a:hover{
   background: var(--gradient-color);
   -webkit-background-clip:text;
@@ -47,13 +75,13 @@ p{
 }
 
 /* banner area */
-.site-main .site-banner{
-  /* background image */
 
-}
 .site-main .site-banner .site-title h3{
   padding-top:35%;
   font-weight: 500;
+  animation: slide_right 0.5s linear forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 .site-main .site-banner .site-title h3::after{
   content:"";
@@ -66,13 +94,38 @@ p{
 }
 .site-main .site-banner .site-title h1{
   font-size: 4rem;
+  animation: slide_right 0.5s linear forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
 }
 .site-main .site-banner .site-title h4{
   font-size: 1.5rem;
+  animation: slide_left 0.5s linear forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+@keyframes slide_right {
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 .site-main .site-banner .banner-image > img{
-  padding:7rem 0;
-  width: 90rem;
+  animation: fade_in 0.5s linear forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+@keyframes fade_in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 /* end banner area */

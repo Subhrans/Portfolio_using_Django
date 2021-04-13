@@ -17,6 +17,9 @@
   color:whitesmoke;
   transition: background .6s ease;
   box-shadow: var(--box-shadow);
+  animation: slide_top 0.5s linear forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
 
 }
 .button.primary-button:hover{

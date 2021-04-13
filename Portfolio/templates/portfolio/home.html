@@ -11,7 +11,7 @@
 {% endblock %}
 {% block content %}
 {% include 'portfolio/navbar.html' %}
-
+{% if request.user.is_staff and not request.user.is_superuser %}
 {% for i in myprofile %}
 {% if not i.visited %}
 <div class="modal fade" tabindex="-1" id="modal">
@@ -50,6 +50,7 @@
 </div>
 {% endif %}
 {% endfor %}
+{% endif %}
 <main class="site-main">
     {% if myprofile %}
     {% for mydetail in myprofile %}
@@ -73,7 +74,7 @@
                     </div>
                     {% endif %}
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 banner-image">
                     <img src="/media/{{mydetail.profile_pic}}" alt="profile-picture" class="img-fluid">
                 </div>
             </div>
