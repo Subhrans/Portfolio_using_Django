@@ -11,6 +11,7 @@ from .models import (
     Subscribe,
     MailBackend,
     Project,
+    Service,
 )
 
 
@@ -44,8 +45,10 @@ def index(request):
         subscribe_form = SubscribeForm()
     if request.user.is_anonymous:
         myprofile = MyDetail.objects.filter(user=1)
+        service = Service.objects.filter(user=1)
     else:
         myprofile = MyDetail.objects.filter(user=request.user)
+        service = Service.objects.filter(user=request.user)
     language_used = set()
     for i in myprofile:
         for j in i.projects_detail.all():
@@ -55,6 +58,7 @@ def index(request):
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
         'language_used': language_used,
+        'service': service,
 
     }
 

@@ -114,8 +114,8 @@ class Achievment(models.Model):
 #         return self.alternative_text
 
 class Service(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
-    name = models.CharField(max_length=20)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
+    name = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/")
 
     def save(self, *args, **kwargs):
