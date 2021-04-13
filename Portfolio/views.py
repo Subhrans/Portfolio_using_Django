@@ -50,7 +50,7 @@ def index(request):
     for i in myprofile:
         for j in i.projects_detail.all():
             language_used.add(str(j.language_used))
-    print(language_used)
+
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
@@ -127,7 +127,8 @@ def portfolio_view(request, userid):
     myprofile = MyDetail.objects.filter(user__username=userid)  # userid is basically username
     if not myprofile.exists():
         return HttpResponseNotFound("Page not found")
+
     context = {
-        'myprofile': myprofile
+        'myprofile': myprofile,
     }
     return render(request, 'portfolio/home.html', context)

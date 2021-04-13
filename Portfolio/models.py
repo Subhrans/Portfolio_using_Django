@@ -3,16 +3,25 @@ from django.contrib.auth.models import User, Group
 from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 from allauth.account.signals import email_confirmed
+from allauth.socialaccount.signals import social_account_added
 
 
 @receiver(email_confirmed)
 def email_confirmed_(request, email_address, **kwargs):
     user = User.objects.get(email=email_address.email)
     group_obj = Group.objects.get(name="portfolio_user")
+    # url_obj = URL.objects.create(user=user, url='http://subhransud525.pythonanywhere.com/' + str(user) + '/')
     user.is_active = True
     user.is_staff = True
     user.groups.add(group_obj)
+    # user.url = url_obj
     user.save()
+
+
+@receiver(social_account_added)
+def social_account_added_true(request, email_address, **kwargs):
+    print(request)
+    print(email_address)
 
 
 class Language(models.Model):
@@ -121,6 +130,7 @@ class MyDetail(models.Model):
     contact_number = models.CharField(max_length=16, default="",
                                       help_text="(Hint) add spaces for format the number as mine")
     slug = models.SlugField(allow_unicode=True, editable=False, default="")
+    url = models.URLField(verbose_name="Site URL", default="", editable=False)
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -132,6 +142,7 @@ class MyDetail(models.Model):
                 field.upload_to = f"Resume/{self.user.username}/"
 
         self.slug = slugify(self.user)
+        self.url = 'http://subhransud525.pythonanywhere.com/' + str(self.slug) + '/'
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -173,3 +184,10 @@ class MailBackend(models.Model):
 
     def __str__(self):
         return self.user.username
+
+# class URL(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
+#     url = models.URLField(verbose_name="Site URL")
+#
+#     def __str__(self):
+#         return self.url

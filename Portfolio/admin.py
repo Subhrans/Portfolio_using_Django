@@ -10,11 +10,19 @@ from .models import (MyDetail,
                      ContactUs,
                      MailBackend,
                      Language,
+
                      )
 
 # Register your models here.
 
 admin.site.unregister(User)
+
+
+# class URLInline(admin.StackedInline):
+#     model = URL
+#
+#
+# admin.site.register(URL)
 
 
 @admin.register(User)
@@ -55,11 +63,13 @@ class UserModifiedAdmin(UserAdmin):
             return qs
         return qs.filter(username=request.user.username)
 
+    # inlines = (URLInline,)
+
 
 @admin.register(MyDetail)
 class MyDetailAdmin(admin.ModelAdmin):
     # fields = ['id','url']
-    list_display = ['id', 'user', 'slug']
+    list_display = ['id', 'user', 'slug','url']
     list_display_links = ['id', 'user', 'slug']
 
     # prepopulated_fields = {"url":('id',)}

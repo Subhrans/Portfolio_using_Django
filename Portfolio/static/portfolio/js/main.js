@@ -51,6 +51,9 @@ navbarFixed();
        $('.subscribe-us-area .subscribe').addClass('container');
     }
 });
+
+$("#modal").modal('show');
+
 $('.owl-carousel').owlCarousel({
     loop:false,
     margin:10,
