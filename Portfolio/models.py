@@ -113,6 +113,18 @@ class Achievment(models.Model):
 #     def __str__(self):
 #         return self.alternative_text
 
+class Service(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
+    name = models.CharField(max_length=20)
+    image = models.ImageField(upload_to="images/")
+
+    def save(self, *args, **kwargs):
+        for field in self._meta.fields:
+            if field.name == "image":
+                field.upload_to = f"images/{self.user}/Services/"
+
+        super().save(*args, **kwargs)
+
 
 class MyDetail(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False, db_index=True)
@@ -127,6 +139,7 @@ class MyDetail(models.Model):
     resume = models.FileField(upload_to="Resume/", null=True, blank=True)
     projects_detail = models.ManyToManyField(Project, related_name="projects")
     achievment_details = models.ForeignKey(Achievment, on_delete=models.CASCADE)
+    services = models.ManyToManyField(Service)
     contact_number = models.CharField(max_length=16, default="",
                                       help_text="(Hint) add spaces for format the number as mine")
     slug = models.SlugField(allow_unicode=True, editable=False, default="")

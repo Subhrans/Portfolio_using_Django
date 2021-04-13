@@ -10,6 +10,7 @@ from .models import (MyDetail,
                      ContactUs,
                      MailBackend,
                      Language,
+                     Service,
 
                      )
 
@@ -86,6 +87,8 @@ class MyDetailAdmin(admin.ModelAdmin):
     def formfield_for_manytomany(self, db_field, request, **kwargs):
         if db_field.name == "projects_detail":
             kwargs["queryset"] = Project.objects.filter(user=request.user)
+        if db_field.name == "services":
+            kwargs["queryset"] = Service.objects.filter(user=request.user)
         return super().formfield_for_manytomany(db_field, request, **kwargs)
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
@@ -197,3 +200,18 @@ class MailBackend(admin.ModelAdmin):
         if request.user.is_superuser:
             return qs
         return qs.filter(user=request.user)
+
+
+@admin.register(Service)
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ['user', 'name']
+
+    def get_queryset(self, request):
+        qs = super(ServiceAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(user=request.user)
+
+    def save_model(self, request, obj, form, change):
+        obj.user = request.user
+        super(ServiceAdmin, self).save_model(request, obj, form, change)

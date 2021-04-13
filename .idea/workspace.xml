@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="removed URL model">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="search field for project section">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0033_auto_20210413_1545.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,13 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00011" summary="subscribe.html">
-      <created>1609348301682</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1609348301682</updated>
     </task>
     <task id="LOCAL-00012" summary="about.html">
       <created>1609349283494</created>
@@ -639,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618302137224</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="search field for project section">
+      <created>1618303356470</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1618303356470</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -670,7 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="contact section color changed" />
     <MESSAGE value="remove redundant tables" />
     <MESSAGE value="Contact Backend" />
     <MESSAGE value="anonymous user default view" />
@@ -695,7 +698,8 @@
     <MESSAGE value="removed url field and add profession field" />
     <MESSAGE value="added services" />
     <MESSAGE value="removed URL model" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed URL model" />
+    <MESSAGE value="search field for project section" />
+    <option name="LAST_COMMIT_MESSAGE" value="search field for project section" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
