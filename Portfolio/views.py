@@ -73,36 +73,64 @@ def index(request):
     return render(request, 'portfolio/home.html', context)
 
 
-def contact_us_view(request):
+def contact_us_view(request, userid=1):
+    print("userid is:", userid)
     if request.method == "POST":
         cuform = ContactUsForm(request.POST)
         if cuform.is_valid():
-            backend = MailBackend.objects.get(user=request.user)
+            print("check user anony,ois", request.user.is_anonymous, "userid", userid)
+            if request.user.is_anonymous and userid != 1:
+                if MailBackend.objects.filter(user__username=userid).exists():
+                    backend = MailBackend.objects.get(user__username=userid)
+                else:
+                    messages.error(request, 'You have not added mail backend. Kindly add that first')
+                    backend = None
+            elif request.user.is_anonymous and userid == 1:
+                backend = MailBackend.objects.get(user=1)
+            else:
+                backend = MailBackend.objects.get(user=request.user)
             msg = cuform.cleaned_data['query']
             user = cuform.cleaned_data['email']
-            if backend.user.is_superuser:
-                send_mail(subject='query',
-                          message=msg,
-                          from_email=settings.EMAIL_HOST_USER,
-                          recipient_list=[user, settings.EMAIL_HOST_USER],
-                          )
-            else:
-                send_mail(subject='query',
-                          message=msg,
-                          from_email=backend.gmail,
-                          recipient_list=[user, backend.gmail],
-                          auth_user=backend.gmail, auth_password=backend.password
-                          )
-            cuform.save()
-            return HttpResponseRedirect('/contact_us/')
+            if backend:
+                print(backend.user)
+                print(backend.gmail)
+                print(backend.password)
+                if backend.user.is_superuser:
+                    send_mail(subject='query',
+                              message=msg,
+                              from_email=settings.EMAIL_HOST_USER,
+                              recipient_list=[user, settings.EMAIL_HOST_USER],
+                              )
+                    cuform.save()
+                    messages.success(request, "Mail Query sent successfully")
+                    return HttpResponseRedirect('/contact_us/')
+                else:
+                    send_mail(subject='query',
+                              message=msg,
+                              from_email=backend.gmail,
+                              recipient_list=[user, backend.gmail],
+                              auth_user=backend.gmail, auth_password=backend.password
+                              )
+                    cuform.save()
+                    messages.success(request, "Mail Query sent successfully")
+                    return HttpResponseRedirect('/'+str(userid)+'/contact_us/')
     else:
         cuform = ContactUsForm()
-    if request.user.is_anonymous:
+    print("check user", request.user.is_anonymous)
+    if request.user.is_anonymous and userid != 1:
+        mydetail = MyDetail.objects.filter(user__username=userid)
+    elif request.user.is_anonymous and userid == 1:
         mydetail = MyDetail.objects.filter(user=1)
     else:
         mydetail = MyDetail.objects.filter(user=request.user)
-    context = {'i': cuform, "mydetail": mydetail}
 
+    false_path = None
+    if request.path == "/" + str(userid) + '/contact_us/':
+        false_path = "/" + str(userid) + '/contact_us/'
+    context = {'i': cuform,
+               "mydetail": mydetail,
+               'false_path':false_path,
+               }
     return render(request, 'portfolio/contact.html', context)
 
 

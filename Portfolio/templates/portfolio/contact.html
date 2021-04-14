@@ -14,13 +14,13 @@ Contact Us | PORTFOLIO
             <div>
                 <h2 class="text-white">Contact Info</h2>
                 <ul class="navbar-nav ml-2 mt-5">
-                    {% if request.user.email or request.user.is_anonymous %}
+                    {% for i in mydetail %}
                     <li class="nav-item d-flex">
                         <span>
                                 <i class="fa fa-envelope text-white" aria-hidden="true"></i>
                             </span>
                         <span>
-                            {% if request.user.is_anonymous %}
+                            {% if request.user.is_anonymous and request.path == '/' %}
                             <a href="mailto:subhransud525@gmail.com"
                                class="text-white ml-4 mx-4 text-decoration-none"
                                target="blank">subhransud525@gmail.com
@@ -28,13 +28,12 @@ Contact Us | PORTFOLIO
                             {% else %}
                             <a href="mailto:{{request.user.email}}"
                                class="text-white ml-4 mx-4 text-decoration-none"
-                               target="blank">{{request.user.email}}
+                               target="blank">{{i.user.email}}
                             </a>
                             {% endif %}
                             </span>
                     </li>
-                    {% endif %}
-                    {% for i in mydetail %}
+
                     {% if i.contact_number %}
                     <li class="nav-item d-flex my-4">
                                 <span>
@@ -85,8 +84,21 @@ Contact Us | PORTFOLIO
             {% endfor %}
         </div>
         <div class="contactForm">
-            <h2 class="mb-5">Send a Message</h2>
-            <form class="formBox" method="POST" action="{% url 'portfolio:contact_us' %}">
+            <h2 class="{% if messages %} mb-3 {% else %}mb-5{% endif %}">Send a Message</h2>
+            {% if messages %}
+                {% for i in messages %}
+                    <p class="alert-danger  px-2" style="margin-bottom: 1.8rem!important;">{{i}}</p>
+                {% endfor %}
+            {% endif %}
+            <form class="formBox" method="POST"
+                  action="
+                  {% if request.user.is_authenticated %}
+                          {% url 'portfolio:contact_us' %}
+                  {% elif request.user.is_anonymous and request.path == '/' %}
+                          {% url 'portfolio:contact_us' %}
+                  {% else %}
+                          {{request.path}}
+                  {% endif %}">
                 {% csrf_token %}
 
                 <div class="form-row">

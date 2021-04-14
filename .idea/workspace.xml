@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="added AOS animation">
-      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/signup.svg" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="designed Signup page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Acievments/subscribe-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Projects/undraw_unlock_24mb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/pal/ProfilePic/portfolio_pic_GuL0r0f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/pal/Services/subscribe-bg.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,20 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00017" summary="optional pic error">
-      <created>1609871135346</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1609871135346</updated>
-    </task>
-    <task id="LOCAL-00018" summary="optional pic error solved">
-      <created>1616767090503</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1616767090503</updated>
     </task>
     <task id="LOCAL-00019" summary="fixing all models">
       <created>1616776084815</created>
@@ -649,7 +629,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618344015621</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="designed Signup page">
+      <created>1618385644500</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1618385644501</updated>
+    </task>
+    <task id="LOCAL-00067" summary="designed email confirm pages">
+      <created>1618389200491</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1618389200491</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -680,8 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="login page responsive done" />
-    <MESSAGE value="login logout done" />
     <MESSAGE value="user can share their profile url" />
     <MESSAGE value="allauth setup not done" />
     <MESSAGE value="removed optional pic &amp; adding colors to social icon" />
@@ -705,7 +697,9 @@
     <MESSAGE value="removed alernative text field" />
     <MESSAGE value="adding animations" />
     <MESSAGE value="added AOS animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added AOS animation" />
+    <MESSAGE value="designed Signup page" />
+    <MESSAGE value="designed email confirm pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="designed email confirm pages" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

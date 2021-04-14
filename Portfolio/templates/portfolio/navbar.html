@@ -28,7 +28,10 @@
               <a class="nav-link" style="--i:6;" href="{% url 'portfolio:index' %}{% if not name %}#services{% endif %}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:7;" href="{% url 'portfolio:contact_us' %}">Contact</a>
+              <a class="nav-link" style="--i:7;"
+                 href="{% if request.user.is_authenticated %}{% url 'portfolio:contact_us' %}{% elif request.user.is_anonymous and request.path == '/' %}{% url 'portfolio:contact_us' %}{% elif request.path == false_path %}{{request.path}}{% else %}{{request.path|slice:':-1'}}{% url 'portfolio:contact_us' %}{% endif %}">
+                Contact
+              </a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item dropdown">
