@@ -1,10 +1,10 @@
 <section class="project-area" id="project-area">
     <div class="container">
-        <div class="project-title pb-5">
+        <div class="project-title pb-5" data-aos="fade-up">
             <h1 class="text-uppercase title-h1">Recently done project</h1>
             <h1 class="text-uppercase title-h1">Quality work</h1>
         </div>
-        <div class="button-group">
+        <div class="button-group" data-aos="fade-up">
             <button type="button" name="button" id="btn1" class="all active" data-filter="*">All</button>
             {% for language in language_used %}
                 <button type="button" name="button" data-filter=".{{language|lower}}" class="">{{language|capfirst}}</button>

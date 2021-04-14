@@ -188,10 +188,10 @@ p{
 .site-main .project-area .button-group button + button{
   padding-left: 3rem;
 }
-.site-main .project-area .grid .element-item{
+/* .site-main .project-area .grid .element-item{
   animation: slide_top 0.5s linear forwards;
   animation-delay: calc(0.2s * var(--j));
-}
+} */
 .site-main .project-area .grid .our-project > .title h4{
   font:normal 700 25px/12px var(--roboto);
 }
