@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="designed Signup page">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="mail backend fixed for anonymous user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Acievments/portfolio.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Projects/music_player.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pal/ProfilePic/portfolio_pic_LQZGzh1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pal/Services/subscribe-bg.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,13 +300,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00019" summary="fixing all models">
-      <created>1616776084815</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1616776084815</updated>
     </task>
     <task id="LOCAL-00020" summary="adding alt_text">
       <created>1616779417552</created>
@@ -643,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618389200491</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="mail backend fixed for anonymous user">
+      <created>1618421107136</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1618421107136</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -674,7 +675,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="user can share their profile url" />
     <MESSAGE value="allauth setup not done" />
     <MESSAGE value="removed optional pic &amp; adding colors to social icon" />
     <MESSAGE value="created Language model" />
@@ -699,7 +699,8 @@
     <MESSAGE value="added AOS animation" />
     <MESSAGE value="designed Signup page" />
     <MESSAGE value="designed email confirm pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="designed email confirm pages" />
+    <MESSAGE value="mail backend fixed for anonymous user" />
+    <option name="LAST_COMMIT_MESSAGE" value="mail backend fixed for anonymous user" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

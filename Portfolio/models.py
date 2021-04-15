@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, Group
 from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 from allauth.account.signals import email_confirmed
-from allauth.socialaccount.signals import social_account_added
+from allauth.socialaccount.signals import social_account_added, pre_social_login
 
 
 @receiver(email_confirmed)
@@ -18,10 +18,17 @@ def email_confirmed_(request, email_address, **kwargs):
     user.save()
 
 
-@receiver(social_account_added)
-def social_account_added_true(request, email_address, **kwargs):
-    print(request)
-    print(email_address)
+@receiver(pre_social_login)
+def social_account_added_true(request, sociallogin, **kwargs):
+    print("request attributes:",dir(sociallogin.user))
+    print("user email",sociallogin.user.email)
+    user = User.objects.get(email=sociallogin.user.email)
+    group_obj = Group.objects.get(name="portfolio_user")
+    user.is_active = True
+    user.is_staff = True
+    user.groups.add(group_obj)
+    # user.url = url_obj
+    user.save()
 
 
 class Language(models.Model):
