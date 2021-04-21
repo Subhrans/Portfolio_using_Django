@@ -14,11 +14,11 @@
         <div class="row grid">
             {% for projects in myprofile %}
                 {% for project in projects.projects_detail.all %}
-            <div class="col-lg-4 col-md-6 col-sm-12  element-item {{project.language_used|lower}}"  style="--j:{{forloop.counter}};">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4 element-item {{project.language_used|lower}}"  style="--j:{{forloop.counter}};">
                 <div class="our-project">
                     <div class="img">
                         <a class="text-popup-link" href="/media/{{project.image}}">
-                            <img src="/media/{{project.image}}" alt="portfolio-1" class="first-img">
+                            <img src="/media/{{project.image}}" alt="portfolio-{{project.id}}" class="first-img">
                         </a>
                     </div>
                 </div>

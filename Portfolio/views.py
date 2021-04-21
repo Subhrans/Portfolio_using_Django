@@ -6,6 +6,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
+from passlib.hash import django_pbkdf2_sha256
 from .models import (
     MyDetail,
     Subscribe,

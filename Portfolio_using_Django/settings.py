@@ -140,7 +140,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'key': ''
         },
         'AUTH_PARAMS': {
-            'access_type': 'offline',
+            'access_type': 'online',
         },
         'SCOPE': [
             'profile',
@@ -148,17 +148,14 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
     },
     'facebook': {
-        # For each OAuth based provider, either add a ``SocialApp``
-        # (``socialaccount`` app) containing the required client
-        # credentials, or list them here:
         'APP': {
             'client_id': '3645079478935288',
             'secret': '85cae8da4619c466ddf4445a1bc560ef',
             'key': ''
         },
-        # 'AUTH_PARAMS': {
-        #     'access_type': 'offline',
-        # },
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
         # 'SCOPE': [
         #     'profile',
         #     'email',

@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="social login permission done">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="linkedin authentication error">
+      <change afterPath="$PROJECT_DIR$/Portfolio.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/19197096.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/Wavy_Bus-10_Single-03_8zv5mMq-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/19197096-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/19197096.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/Wavy_Bus-10_Single-03-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/Wavy_Bus-10_Single-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/Wavy_Tech-01_Single-10-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/Wavy_Tech-01_Single-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4 (1).gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4 (2).gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-gif-new.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-gif-new1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-mp4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio_using_Django/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bandicam_2021-03-31_10-19-54-837.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lenscraft.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/lenscraft-new-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/joy/Services/19197096-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/joy/Services/19197096-removebg-preview_WCx5YeM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/joy/Services/Wavy_Bus-10_Single-03-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/joy/Services/Wavy_Tech-01_Single-10-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/partials/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/partials/variables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Projects/lenscraft.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/joy/Services/19197096_FSucWQe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/joy/Services/Wavy_Bus-10_Single-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/joy/Services/Wavy_Tech-01_Single-10_BXHepBc.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,20 +332,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00022" summary="sending email error">
-      <created>1616781484054</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1616781484054</updated>
-    </task>
-    <task id="LOCAL-00023" summary="almost done">
-      <created>1616788066345</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1616788066345</updated>
     </task>
     <task id="LOCAL-00024" summary="adding requirements and subscribe_navbar">
       <created>1616790499407</created>
@@ -640,7 +662,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618511712342</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="facebook authentication applied">
+      <created>1618517122465</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1618517122465</updated>
+    </task>
+    <task id="LOCAL-00072" summary="linkedin authentication error">
+      <created>1618517373380</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1618517373380</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -671,8 +707,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="created Language model" />
-    <MESSAGE value="navbar fixed in subscribe successful" />
     <MESSAGE value="django allauth problem" />
     <MESSAGE value="different user can see own data" />
     <MESSAGE value="fixed cv url" />
@@ -696,7 +730,9 @@
     <MESSAGE value="mail backend fixed for anonymous user" />
     <MESSAGE value="pre social login error" />
     <MESSAGE value="social login permission done" />
-    <option name="LAST_COMMIT_MESSAGE" value="social login permission done" />
+    <MESSAGE value="facebook authentication applied" />
+    <MESSAGE value="linkedin authentication error" />
+    <option name="LAST_COMMIT_MESSAGE" value="linkedin authentication error" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

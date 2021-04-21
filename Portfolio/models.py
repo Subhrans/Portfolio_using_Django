@@ -3,9 +3,10 @@ from django.contrib.auth.models import User, Group
 from django.dispatch import receiver
 from django.template.defaultfilters import slugify
 from allauth.account.signals import email_confirmed
+from passlib.hash import django_pbkdf2_sha256
 
 
-@receiver(email_confirmed)   # this signal handle both social authentication and signup form authentication
+@receiver(email_confirmed)  # this signal handle both social authentication and signup form authentication
 def email_confirmed_(request, email_address, **kwargs):
     user = User.objects.get(email=email_address.email)
     group_obj = Group.objects.get(name="portfolio_user")
@@ -191,6 +192,11 @@ class MailBackend(models.Model):
 
     def __str__(self):
         return self.user.username
+
+    # def save(self, *args, **kwargs):
+    #     hashed_password = django_pbkdf2_sha256.hash(self.password)
+    #     self.password = hashed_password
+    #     super(MailBackend, self).save(*args, **kwargs)
 
 # class URL(models.Model):
 #     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
