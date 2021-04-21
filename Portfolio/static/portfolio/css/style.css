@@ -213,7 +213,7 @@ p{
 /* end project area */
 
 /* start Service Area */
-.services .container .owl-carousel .card .img-div{
+.services .container .service-box .card .img-div{
     background-color: var(--primary-color2);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -221,17 +221,16 @@ p{
     border-width: 1px;
     border-bottom: none;
     border-color: var(--primary-color);
-    height: 200px;
 }
 
-.services .container .owl-carousel .card .card-body .card-title{
+.services .container .service-box .card .card-body .card-title{
     text-transform:uppercase;
     padding:10px 0;
     font-size:1.5rem;
     font-weight:600;
 }
 
-.services .container .owl-carousel .card:hover{
+.services .container .service-box .card:hover{
     box-shadow:var(--box-shadow);
 }
 /* End Service Area */

@@ -21,6 +21,10 @@
           <option value="Rimmiscollection.models.Saree._meta" />
           <option value="django.db.models.fields.DecimalField.__mul__" />
           <option value="Rimmiscollection.models.Product.objects" />
+          <option value="Portfolio.models.Project.objects" />
+          <option value="Portfolio.models.Service.objects" />
+          <option value="Portfolio.models.Social_Site_Connection.objects" />
+          <option value="Portfolio.models.Achievment.objects" />
         </list>
       </option>
     </inspection_tool>
