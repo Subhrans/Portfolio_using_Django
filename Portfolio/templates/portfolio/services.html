@@ -6,8 +6,8 @@
         </div>
         <div class="row">
             {% for i in service %}
-            <div class="col-sm-2 {% if service.count == 4 %} col-md-3 justify-content-between d-flex {% else %} col-md-4 {% endif %}mt-4 service-box">
-                <div class="card border-0" style="width: 18rem;">
+            <div class="col-sm-6 {% if service.count == 4 %} col-md-6 col-lg-3 justify-content-between d-flex {% else %}col-sm-12 col-md-6 col-lg-4{% endif %} px-sm-5 px-lg-5 px-md-5 mt-4 service-box">
+                <div class="card border-0" style="width:18rem;">
                     <div class="img-div mx-auto d-flex">
                         <img src="/media/{{i.image}}" alt="service - {{i.id}}" class="w-75 mx-auto">
                     </div>

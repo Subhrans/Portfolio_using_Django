@@ -12,7 +12,7 @@ from .models import (MyDetail,
                      MailBackend,
                      Language,
                      Service,
-
+                     Skill
                      )
 
 # Register your models here.
@@ -226,3 +226,19 @@ class ServiceAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.user = request.user
         super(ServiceAdmin, self).save_model(request, obj, form, change)
+
+
+@admin.register(Skill)
+class SkillsAdmin(admin.ModelAdmin):
+    list_display = ['user', 'id']
+    list_display_links = ['user', 'id']
+
+    def save_model(self, request, obj, form, change):
+        obj.user = request.user
+        super(SkillsAdmin, self).save_model(request, obj, form, change)
+
+    def get_queryset(self, request):
+        qs = super(SkillsAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        return qs.filter(user=request.user)

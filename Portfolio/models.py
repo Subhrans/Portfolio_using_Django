@@ -111,7 +111,8 @@ class Service(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/")
-    description = models.TextField(default="", verbose_name="little Description",help_text="Please Add less than 100 characters, else rest of the text automatically hide.")
+    description = models.TextField(default="", verbose_name="little Description",
+                                   help_text="Please Add less than 100 characters, else rest of the text automatically hide.")
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -199,9 +200,13 @@ class MailBackend(models.Model):
     #     self.password = hashed_password
     #     super(MailBackend, self).save(*args, **kwargs)
 
-# class URL(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
-#     url = models.URLField(verbose_name="Site URL")
-#
-#     def __str__(self):
-#         return self.url
+
+class Skill(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
+    stack = models.ManyToManyField(Language, db_index=True)
+
+    class Meta:
+        verbose_name_plural = "Skills"
+
+    def __str__(self):
+        return self.user.username
