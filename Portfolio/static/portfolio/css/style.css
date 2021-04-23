@@ -230,8 +230,11 @@ p{
     font-weight:600;
 }
 
+
+
 .services .container .service-box .card:hover{
     box-shadow:var(--box-shadow);
+
 }
 /* End Service Area */
 

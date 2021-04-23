@@ -11,11 +11,14 @@
                     <div class="img-div mx-auto d-flex">
                         <img src="/media/{{i.image}}" alt="service - {{i.id}}" class="w-75 mx-auto">
                     </div>
-                    <div class="card-body border-top-0 border rounded">
+                    <div class="card-body border-top-0 border">
                         <h5 class="card-title">{{i.name}}</h5>
-                        <p class="card-text para">Some quick example text to build on the card title and make up the
-                            bulk of the
-                            card's content.</p>
+                        <p class="card-text para">
+                            {{i.description|slice:":90"}}
+                            {% if i.description|length > 90 %}
+                                <br><small><a href="#" class="read-more">Readmore</a></small>
+                            {% endif %}
+                        </p>
                     </div>
                 </div>
                 <!--            <div class="item">-->

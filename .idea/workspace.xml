@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="linkedin authentication error">
-      <change afterPath="$PROJECT_DIR$/Portfolio.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0039_service_description.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/103120000000007845.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/form-15g.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bandicam_2021-03-31_10-19-54-837.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lenscraft.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/pngegg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/bandicam_2021-03-31_10-19-54-837_egZWj6c.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Projects/bandicam_2021-03-31_10-19-54-837.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,13 +307,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Added github_links and web_links">
-      <created>1617166059964</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1617166059964</updated>
     </task>
     <task id="LOCAL-00026" summary="cv download hire me">
       <created>1617171916501</created>
@@ -650,7 +644,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619025603070</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Added restriction to Service model">
+      <created>1619038579738</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1619038579738</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -681,7 +682,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="different user can see own data" />
     <MESSAGE value="fixed cv url" />
     <MESSAGE value="fixed user table from customer user" />
     <MESSAGE value="user can view only own data" />
@@ -706,7 +706,8 @@
     <MESSAGE value="facebook authentication applied" />
     <MESSAGE value="linkedin authentication error" />
     <MESSAGE value="Service section problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service section problem" />
+    <MESSAGE value="Added restriction to Service model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added restriction to Service model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

@@ -111,6 +111,7 @@ class Service(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/")
+    description = models.TextField(default="", verbose_name="little Description",help_text="Please Add less than 100 characters, else rest of the text automatically hide.")
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -151,7 +152,7 @@ class MyDetail(models.Model):
 
         self.slug = slugify(self.user)
         self.url = 'http://subhransud525.pythonanywhere.com/' + str(self.slug) + '/'
-        super().save(*args, **kwargs)
+        super(MyDetail, self).save(*args, **kwargs)
 
     def __str__(self):
         return ("{} " + "{}").format(self.user.first_name, self.user.last_name)

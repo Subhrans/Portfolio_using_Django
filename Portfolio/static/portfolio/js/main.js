@@ -68,6 +68,15 @@ $('.owl-carousel').owlCarousel({
         },
     }
 });
+  $('.card').hover(function(){
+    $('.read-more').addClass('d-block');
+    $('.read-more').removeClass('d-none');
+  },
+  function(){
+    $('.read-more').removeClass('d-block');
+    $('.read-more').addClass('d-none');
+  }
+  );
   // ==== Magnific Popup =====
   // $('.first-img').magnificPopup({type:'image'});
 });

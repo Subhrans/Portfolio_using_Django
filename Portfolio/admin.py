@@ -79,7 +79,7 @@ class MyDetailAdmin(admin.ModelAdmin):
     # prepopulated_fields = {"url":('id',)}
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, MyDetailAdmin).save_model(request, obj, form, change)
+        super(MyDetailAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(MyDetailAdmin, self).get_queryset(request)
@@ -92,14 +92,14 @@ class MyDetailAdmin(admin.ModelAdmin):
             kwargs["queryset"] = Project.objects.filter(user=request.user)
         if db_field.name == "services":
             kwargs["queryset"] = Service.objects.filter(user=request.user)
-        return super(self, MyDetailAdmin).formfield_for_manytomany(db_field, request, **kwargs)
+        return super(MyDetailAdmin, self).formfield_for_manytomany(db_field, request, **kwargs)
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "social_site_connection_details":
             kwargs['queryset'] = Social_Site_Connection.objects.filter(user=request.user)
         if db_field.name == "achievement_details":
             kwargs['queryset'] = Achievment.objects.filter(user=request.user)
-        return super(self, MyDetailAdmin).formfield_for_foreignkey(db_field, request, **kwargs)
+        return super(MyDetailAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -111,7 +111,7 @@ class ProjectAdmin(admin.ModelAdmin):
     # prepopulated_fields = {"slug":('name','language_used','created_date')}
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, ProjectAdmin).save_model(request, obj, form, change)
+        super(ProjectAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(ProjectAdmin, self).get_queryset(request)
@@ -132,7 +132,7 @@ class AchievementAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, AchievementAdmin).save_model(request, obj, form, change)
+        super(AchievementAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(AchievementAdmin, self).get_queryset(request)
@@ -148,7 +148,7 @@ class SubscribeAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, SubscribeAdmin).save_model(request, obj, form, change)
+        super(SubscribeAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(SubscribeAdmin, self).get_queryset(request)
@@ -164,7 +164,7 @@ class SocialSiteConnectionAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, SocialSiteConnectionAdmin).save_model(request, obj, form, change)
+        super(SocialSiteConnectionAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(SocialSiteConnectionAdmin, self).get_queryset(request)
@@ -180,7 +180,7 @@ class ContactUsAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, ContactUsAdmin).save_model(request, obj, form, change)
+        super(ContactUsAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(ContactUsAdmin, self).get_queryset(request)
@@ -196,7 +196,7 @@ class MailBackendAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user
-        super(self, MailBackendAdmin).save_model(request, obj, form, change)
+        super(MailBackendAdmin, self).save_model(request, obj, form, change)
 
     def get_queryset(self, request):
         qs = super(MailBackendAdmin, self).get_queryset(request)
@@ -215,7 +215,7 @@ class ServiceAdmin(admin.ModelAdmin):
             self.message_user(request, 'Only four entries can exist at once - please remove others first',
                               messages.ERROR)
             return HttpResponseRedirect("/admin/Portfolio/service/")
-        return super(self, ServiceAdmin).add_view(request, form_url, extra_context)
+        return super(ServiceAdmin, self).add_view(request, form_url, extra_context)
 
     def get_queryset(self, request):
         qs = super(ServiceAdmin, self).get_queryset(request)
