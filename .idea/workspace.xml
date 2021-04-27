@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="box-sizing:error">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0040_skill.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="skills model" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,13 +292,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00027" summary="fixed navbar">
-      <created>1617173086502</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1617173086502</updated>
     </task>
     <task id="LOCAL-00028" summary="remove comments from settings">
       <created>1617646880515</created>
@@ -643,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619190797096</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="skills model">
+      <created>1619194617923</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1619194617923</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -674,7 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed user table from customer user" />
     <MESSAGE value="user can view only own data" />
     <MESSAGE value="applied readonly for staff users" />
     <MESSAGE value="removed permission view from staff users" />
@@ -699,7 +691,8 @@
     <MESSAGE value="Service section problem" />
     <MESSAGE value="Added restriction to Service model" />
     <MESSAGE value="box-sizing:error" />
-    <option name="LAST_COMMIT_MESSAGE" value="box-sizing:error" />
+    <MESSAGE value="skills model" />
+    <option name="LAST_COMMIT_MESSAGE" value="skills model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
