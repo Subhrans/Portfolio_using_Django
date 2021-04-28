@@ -6,7 +6,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 SECRET_KEY = config('key_things')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -40,20 +40,19 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-SECURE_HSTS_SECONDS = 3153699999
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-SECURE_HSTS_PRELOAD = True
-SECURE_SSL_REDIRECT = True
-
-SECURE_REFERRER_POLICY = "strict-origin"
-
-SECURE_BROWSER_XSS_FILTER = True
-
+# SESSION_COOKIE_SECURE = False
+# CSRF_COOKIE_SECURE = False
+# 
+# SECURE_HSTS_SECONDS = None
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+#
+# SECURE_HSTS_PRELOAD = False
+# SECURE_SSL_REDIRECT = False
+#
+#
+# SECURE_REFERRER_POLICY = None
+#
+# SECURE_BROWSER_XSS_FILTER = False
 
 ROOT_URLCONF = 'Portfolio_using_Django.urls'
 
