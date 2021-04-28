@@ -43,7 +43,7 @@ class Project(models.Model):
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
             if field.name == "image":
-                field.upload_to = f"images/Projects/"
+                field.upload_to = f"images/{self.user}/Projects/"
         self.slug = slugify(self.name + self.language_used.name + str(self.created_date))
         super().save(*args, **kwargs)
 

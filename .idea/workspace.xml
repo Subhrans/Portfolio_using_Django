@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="added securities">
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="never apply security in development">
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/covid19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/Projects/ezgif.com-gif-maker_RMh2QWO.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/joy/Projects/ezgif.com-gif-maker_1.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/bandicam 2021-03-31 10-19-54-837.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/103120000000007845.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/compressed/services/form-15g.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/doctor_app.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/keekers.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4 (1).gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4 (2).gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft mp4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-gif-new.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-gif-new1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft-mp4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/lenscraft.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/library_MG.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/library_MG.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/music_player.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/images/portfolio.JPG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio_using_Django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Projects/bandicam_2021-03-31_10-19-54-837_egZWj6c.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Projects/lenscraft-new-1.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,13 +318,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00029" summary="decouple">
-      <created>1617647391983</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1617647391983</updated>
     </task>
     <task id="LOCAL-00030" summary="decouple on privacy">
       <created>1617647588967</created>
@@ -640,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619545888873</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="never apply security in development">
+      <created>1619597533699</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1619597533699</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -671,7 +693,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="applied readonly for staff users" />
     <MESSAGE value="removed permission view from staff users" />
     <MESSAGE value="registered user added into groups" />
     <MESSAGE value="removed url field and add profession field" />
@@ -696,7 +717,8 @@
     <MESSAGE value="box-sizing:error" />
     <MESSAGE value="skills model" />
     <MESSAGE value="added securities" />
-    <option name="LAST_COMMIT_MESSAGE" value="added securities" />
+    <MESSAGE value="never apply security in development" />
+    <option name="LAST_COMMIT_MESSAGE" value="never apply security in development" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
