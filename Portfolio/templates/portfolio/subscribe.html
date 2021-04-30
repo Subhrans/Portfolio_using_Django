@@ -9,7 +9,7 @@
         </div>
 
         <div class="d-sm-flex justify-content-center">
-            <form class="w-50" action="{% url 'portfolio:index' %}" method="POST">
+            <form class="w-50" action="{% if request.path == '/' %}{% url 'portfolio:index' %}{% elif name_of_user|slice:'1:-1' %}{% url 'portfolio:user_portfolio_view' name_of_user|slice:'1:-1' %}{% endif  %}" method="POST">
                 {% csrf_token %}
                 {{subscribe_form.non_field_errors}}
                 {% for i in subscribe_form %}

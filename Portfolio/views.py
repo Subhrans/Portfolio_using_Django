@@ -141,6 +141,7 @@ def contact_us_view(request, userid=1):
     context = {'i': cuform,
                "mydetail": mydetail,
                'false_path': false_path,
+               'userid':userid,
                }
     return render(request, 'portfolio/contact.html', context)
 
@@ -179,27 +180,30 @@ def portfolio_view(request, username):
     backend = None
     print("user can call same function")
     try:
-        MailBackend.objects.get(user__username=username)
+
         if request.method == 'POST':
             subscribe_form = SubscribeForm(request.POST)
             if subscribe_form.is_valid():
                 email = subscribe_form.cleaned_data['email']
                 name = email.split('@')[0]
-
+                print("sending.....")
                 backend = MailBackend.objects.get(user__username=username)
                 send_mail(
                     subject="Subscribed User",
                     message="Thanks For subscribing us",
                     from_email=backend.gmail,
                     recipient_list=[backend.gmail, email],
-                    auth_user=backend.gmail, auth_password=backend.password
+                    auth_user=backend.gmail, auth_password=backend.password,
+                    fail_silently=True
                 )
-                Subscribe.objects.create(user__username=username, name=name, email=email)
+                Subscribe.objects.create(user=backend.user, name=name, email=email)
                 print("user email is: ", email)
                 return render(request, 'portfolio/subscribe_successful.html',
                               {'name': name, "email": email, 'backend': backend})
         else:
             subscribe_form = SubscribeForm()
+            if MailBackend.objects.filter(user__username=username).exists():
+                backend = True
     except Exception as e:
         print(e)
     # myprofile = MyDetail.objects.filter(user=1)
@@ -208,16 +212,20 @@ def portfolio_view(request, username):
         return HttpResponseNotFound("Page not found")
     service = Service.objects.filter(user__username=username)
     language_used = set()
+    name_of_user = None
     for i in myprofile:
         for j in i.projects_detail.all():
             language_used.add(str(j.language_used))
-
+        print("printing username", i.user)
+        name_of_user = "/"+str(i.user)+"/"
+    print(backend)
     context = {
         'myprofile': myprofile,
         'subscribe_form': subscribe_form,
         'language_used': language_used,
         'service': service,
         'backend': backend,
+        'name_of_user':name_of_user,
 
     }
     return render(request, 'portfolio/home.html', context)

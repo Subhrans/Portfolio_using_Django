@@ -143,8 +143,11 @@ class AchievementAdmin(admin.ModelAdmin):
 
 @admin.register(Subscribe)
 class SubscribeAdmin(admin.ModelAdmin):
-    list_display = ['user', 'name']
-    list_display_links = ['user']
+    list_display = ['user', 'name', 'date']
+    list_display_links = ['user', 'name', 'date']
+    search_fields = ['name', 'email', 'date']
+    list_per_page = 10
+    list_filter = ['date']
 
     def save_model(self, request, obj, form, change):
         obj.user = request.user

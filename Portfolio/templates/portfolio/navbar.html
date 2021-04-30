@@ -10,22 +10,52 @@
           <div class="mr-auto"></div>
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" style="--i:1;" href="{% url 'portfolio:index' %}">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" style="--i:1;" href="{% if request.path == name_of_user %}{% url 'portfolio:index' %}{{request.path|slice:'1:'}}{% elif request.path == '/contact_us/en/' %}{% url 'portfolio:index' %}{{name_of_user}}{% elif request.path|cut:'/contact_us/en/'|slice:'1:' == userid %}{% url 'portfolio:index' %}{{userid}}{% else %}{% url 'portfolio:index' %}{%endif %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:2;" href="{% url 'portfolio:index' %}{% if not name %}#about-area{% endif %}">About</a>
+              {% if request.path == name_of_user %}
+              <a class="nav-link" style="--i:2;" href="{% url 'portfolio:index' %}{{request.path|slice:'1:'}}#about-area">About</a>
+              {% elif request.path == false_path %}
+              <a class="nav-link" style="--i:2;" href="{% url 'portfolio:index' %}{{userid}}#about-area">About</a>
+              {% else %}
+              <a class="nav-link" style="--i:2;" href="{% url 'portfolio:index' %}#about-area">About</a>
+              {% endif %}
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:3;" href="{% url 'portfolio:index' %}{% if not name %}#resume {% endif %}">Resume</a>
+              {% if request.path == name_of_user %}
+              <a class="nav-link" style="--i:3;" href="{% url 'portfolio:index' %}{{request.path|slice:'1:'}}#resume">Resume</a>
+              {% elif request.path == false_path %}
+              <a class="nav-link" style="--i:3;" href="{% url 'portfolio:index' %}{{userid}}#resume">Resume</a>
+              {% else %}
+              <a class="nav-link" style="--i:3;" href="{% url 'portfolio:index' %}#resume">Resume</a>
+              {% endif %}
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:4;" href="{% url 'portfolio:index' %}{% if not name %}#project-area{% endif %}">Projects</a>
+              {% if request.path == name_of_user %}
+              <a class="nav-link" style="--i:4;" href="{% url 'portfolio:index' %}{{request.path|slice:'1:'}}#project-area">Projects</a>
+              {% elif request.path == false_path %}
+              <a class="nav-link" style="--i:4;" href="{% url 'portfolio:index' %}{{userid}}#project-area">Projects</a>
+              {% else %}
+              <a class="nav-link" style="--i:4;" href="{% url 'portfolio:index' %}#project-area">Projects</a>
+              {% endif %}
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:5;" href="{% url 'portfolio:index' %}{% if not name %}#{% endif %}">Portfolio</a>
+              {% if request.path == name_of_user %}
+              <a class="nav-link" style="--i:5;" href="{% url 'portfolio:index' %}{{request.path|slice:'1:'}}#">Portfolio</a>
+              {% elif request.path == false_path %}
+              <a class="nav-link" style="--i:5;" href="{% url 'portfolio:index' %}{{userid}}#">Portfolio</a>
+              {% else %}
+              <a class="nav-link" style="--i:5;" href="{% url 'portfolio:index' %}#">Portfolio</a>
+              {% endif %}
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="--i:6;" href="{% url 'portfolio:index' %}{% if not name %}#services{% endif %}">Services</a>
+              {% if request.path == name_of_user %}
+              <a class="nav-link" style="--i:6;" href="{% url 'portfolio:index' %}{{request.path|slice:'1:'}}#services">Services</a>
+              {% elif request.path == false_path %}
+              <a class="nav-link" style="--i:6;" href="{% url 'portfolio:index' %}{{userid}}#services">Services</a>
+              {% else %}
+              <a class="nav-link" style="--i:6;" href="{% url 'portfolio:index' %}#services">Services</a>
+              {% endif %}
             </li>
             <li class="nav-item">
               <a class="nav-link" style="--i:7;"

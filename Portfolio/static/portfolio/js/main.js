@@ -56,7 +56,7 @@ $("#modal").modal('show');
 
 $('.owl-carousel').owlCarousel({
     loop:false,
-    margin:10,
+    margin:0,
     nav:true,
     responsive:{
         0:{
