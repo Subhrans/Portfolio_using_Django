@@ -7,7 +7,7 @@
   }
   .img-fluid{
     /* margin-left: 0; */
-    margin: 4%;
+    margin: 4% 1%;
     height: 400px;
   }
   .about-area .container-fluid .row .col-md-12{
@@ -54,6 +54,7 @@
 }
   .header_area .main-menu .navbar .navbar-brand {
     padding:0;
+    margin-left: -20px;
   }
   .navbar-light .navbar-toggler{
     margin-left: 95%;
@@ -89,6 +90,6 @@
     padding-left: 2rem;
 }
 .header_area .main-menu .navbar .navbar-brand {
-  margin-left: -40px;
+  margin-left: -67px;
 }
 }

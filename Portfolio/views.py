@@ -18,7 +18,9 @@ from .models import (
 local_visited = False
 
 
-def index(request):
+def index(request, username="joy"):
+    print("super user:", username)
+    print("this is not contact us function")
     if request.method == 'POST':
         subscribe_form = SubscribeForm(request.POST)
         if subscribe_form.is_valid():
@@ -40,7 +42,7 @@ def index(request):
                     recipient_list=[backend.gmail, email],
                     auth_user=backend.gmail, auth_password=backend.password
                 )
-            Subscribe.objects.create(name=name, email=email)
+            Subscribe.objects.create(user=request.user, name=name, email=email)
             print("user email is: ", email)
             return render(request, 'portfolio/subscribe_successful.html',
                           {'name': name, "email": email, 'backend': backend})
@@ -48,6 +50,7 @@ def index(request):
         subscribe_form = SubscribeForm()
     if request.user.is_anonymous:
         myprofile = MyDetail.objects.filter(user=1)
+        # myprofile = MyDetail.objects.filter(user__username=userid)
         service = Service.objects.filter(user=1)
     else:
         myprofile = MyDetail.objects.filter(user=request.user)
@@ -55,9 +58,9 @@ def index(request):
         check_visited = request.session.get('visited', 'False')
         if check_visited == "True":
             myprofile.update(visited=True)
-        if len(myprofile) == 0:
+        if myprofile.count() == 0:
             request.session['visited'] = "False"
-        if len(myprofile) == 1:
+        if myprofile.count() == 1:
             request.session['visited'] = "True"
     language_used = set()
     for i in myprofile:
@@ -114,23 +117,30 @@ def contact_us_view(request, userid=1):
                               )
                     cuform.save()
                     messages.success(request, "Mail Query sent successfully")
-                    return HttpResponseRedirect('/'+str(userid)+'/contact_us/')
+                    return HttpResponseRedirect('/' + str(userid) + '/contact_us/')
     else:
         cuform = ContactUsForm()
     print("check user", request.user.is_anonymous)
     if request.user.is_anonymous and userid != 1:
+        print("this")
         mydetail = MyDetail.objects.filter(user__username=userid)
     elif request.user.is_anonymous and userid == 1:
+        print("this is")
         mydetail = MyDetail.objects.filter(user=1)
+    elif request.user.is_authenticated and userid != 1:
+        mydetail = MyDetail.objects.filter(user__username=userid)
     else:
+        print("this is not")
         mydetail = MyDetail.objects.filter(user=request.user)
 
     false_path = None
-    if request.path == "/" + str(userid) + '/contact_us/':
-        false_path = "/" + str(userid) + '/contact_us/'
+    print(request.path)
+    if request.path == "/" + str(userid) + '/contact_us/en/':
+        false_path = "/" + str(userid) + '/contact_us/en/'
+    print("false_path", false_path)
     context = {'i': cuform,
                "mydetail": mydetail,
-               'false_path':false_path,
+               'false_path': false_path,
                }
     return render(request, 'portfolio/contact.html', context)
 
@@ -164,12 +174,50 @@ def logout_view(request):
     return HttpResponseRedirect('/login/')
 
 
-def portfolio_view(request, userid):
-    myprofile = MyDetail.objects.filter(user__username=userid)  # userid is basically username
+def portfolio_view(request, username):
+    subscribe_form = None
+    backend = None
+    print("user can call same function")
+    try:
+        MailBackend.objects.get(user__username=username)
+        if request.method == 'POST':
+            subscribe_form = SubscribeForm(request.POST)
+            if subscribe_form.is_valid():
+                email = subscribe_form.cleaned_data['email']
+                name = email.split('@')[0]
+
+                backend = MailBackend.objects.get(user__username=username)
+                send_mail(
+                    subject="Subscribed User",
+                    message="Thanks For subscribing us",
+                    from_email=backend.gmail,
+                    recipient_list=[backend.gmail, email],
+                    auth_user=backend.gmail, auth_password=backend.password
+                )
+                Subscribe.objects.create(user__username=username, name=name, email=email)
+                print("user email is: ", email)
+                return render(request, 'portfolio/subscribe_successful.html',
+                              {'name': name, "email": email, 'backend': backend})
+        else:
+            subscribe_form = SubscribeForm()
+    except Exception as e:
+        print(e)
+    # myprofile = MyDetail.objects.filter(user=1)
+    myprofile = MyDetail.objects.filter(user__username=username)  # userid is basically username
     if not myprofile.exists():
         return HttpResponseNotFound("Page not found")
+    service = Service.objects.filter(user__username=username)
+    language_used = set()
+    for i in myprofile:
+        for j in i.projects_detail.all():
+            language_used.add(str(j.language_used))
 
     context = {
         'myprofile': myprofile,
+        'subscribe_form': subscribe_form,
+        'language_used': language_used,
+        'service': service,
+        'backend': backend,
+
     }
     return render(request, 'portfolio/home.html', context)

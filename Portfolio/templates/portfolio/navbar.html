@@ -29,7 +29,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" style="--i:7;"
-                 href="{% if request.user.is_authenticated %}{% url 'portfolio:contact_us' %}{% elif request.user.is_anonymous and request.path == '/' %}{% url 'portfolio:contact_us' %}{% elif request.path == false_path %}{{request.path}}{% else %}{{request.path|slice:':-1'}}{% url 'portfolio:contact_us' %}{% endif %}">
+                 href="{% if request.user.is_authenticated and request.path == '/' %}{% url 'portfolio:contact_us' %}{% elif request.user.is_anonymous and request.path == '/' %}{% url 'portfolio:contact_us' %}{% elif request.user.is_anonymous and request.path == '/contact_us/en/' %}{% url 'portfolio:contact_us' %}{% elif request.path == false_path %}{{request.path}}{% elif request.user.is_authenticated and request.path == '/contact_us/en/' %}{% url 'portfolio:contact_us' %}{% else %}{{request.path|slice:':-1'}}{% url 'portfolio:contact_us' %}{% endif %}">
                 Contact
               </a>
             </li>
