@@ -6,12 +6,10 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.conf import settings
-from passlib.hash import django_pbkdf2_sha256
 from .models import (
     MyDetail,
     Subscribe,
     MailBackend,
-    Project,
     Service,
 )
 
@@ -141,7 +139,7 @@ def contact_us_view(request, userid=1):
     context = {'i': cuform,
                "mydetail": mydetail,
                'false_path': false_path,
-               'userid':userid,
+               'userid': userid,
                }
     return render(request, 'portfolio/contact.html', context)
 
@@ -217,7 +215,7 @@ def portfolio_view(request, username):
         for j in i.projects_detail.all():
             language_used.add(str(j.language_used))
         print("printing username", i.user)
-        name_of_user = "/"+str(i.user)+"/"
+        name_of_user = "/" + str(i.user) + "/"
     print(backend)
     context = {
         'myprofile': myprofile,
@@ -225,7 +223,7 @@ def portfolio_view(request, username):
         'language_used': language_used,
         'service': service,
         'backend': backend,
-        'name_of_user':name_of_user,
+        'name_of_user': name_of_user,
 
     }
     return render(request, 'portfolio/home.html', context)

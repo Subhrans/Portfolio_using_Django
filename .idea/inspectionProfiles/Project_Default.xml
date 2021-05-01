@@ -25,6 +25,9 @@
           <option value="Portfolio.models.Service.objects" />
           <option value="Portfolio.models.Social_Site_Connection.objects" />
           <option value="Portfolio.models.Achievment.objects" />
+          <option value="Portfolio.models.MailBackend.*" />
+          <option value="Portfolio.models.Subscribe.*" />
+          <option value="Portfolio.models.MyDetail.*" />
         </list>
       </option>
     </inspection_tool>

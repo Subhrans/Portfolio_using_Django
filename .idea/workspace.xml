@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="contact us link worked perfectly">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0041_subscribe_date.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="dynamic links done">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/subscribe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -304,13 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00032" summary="contact form">
-      <created>1617653984812</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1617653984812</updated>
     </task>
     <task id="LOCAL-00033" summary="fixed subscribe button">
       <created>1617654935868</created>
@@ -648,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619766901204</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="dynamic links done">
+      <created>1619819923357</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1619819923357</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -679,7 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed url field and add profession field" />
     <MESSAGE value="added services" />
     <MESSAGE value="removed URL model" />
     <MESSAGE value="search field for project section" />
@@ -704,7 +698,8 @@
     <MESSAGE value="never apply security in development" />
     <MESSAGE value="gif optimised" />
     <MESSAGE value="contact us link worked perfectly" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact us link worked perfectly" />
+    <MESSAGE value="dynamic links done" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamic links done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />
