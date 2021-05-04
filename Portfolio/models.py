@@ -110,7 +110,10 @@ class Achievment(models.Model):
 class Service(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to="images/")
+    image = models.ImageField(upload_to="images/", null=True, blank=True)
+    color = models.CharField(default="#e91e63",max_length=20,
+                             help_text="Please enter only color codes or name, do not include rgba values",
+                             null=True, blank=True,verbose_name="background color")
     description = models.TextField(default="", verbose_name="little Description",
                                    help_text="Please Add less than 100 characters, else rest of the text automatically hide.")
 

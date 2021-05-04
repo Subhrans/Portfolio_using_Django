@@ -7,41 +7,21 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container flex-wrap flex-md-nowrap align-content-center flex-column flex-sm-column flex-md-row">
         {% for i in service %}
         <div class="box overflow-hidden">
             <div class="icon">
+                {% if i.image %}
                 <img alt="service - {{i.id}}" class="w-100 mx-auto" src="/media/{{i.image}}">
+                {% else %}
+                    0{{i.id}}
+                {% endif %}
             </div>
             <div class="content text-center">
                 <h3 class="my-4">{{i.name|capfirst }}</h3>
                 <p>{{i.description}}</p>
             </div>
         </div>
-
         {% endfor %}
-    </div>
-
-    <div class="container pb-4 my-3">
-        <div class="row">
-            <div class="pb-3">
-                <h1 class="text-uppercase my-5 title-h1">Service Available</h1>
-            </div>
-        </div>
-        <div class="row justify-content-around mt-2">
-            {% for i in service %}
-            <div class="box col-md-4 overflow-hidden text-center">
-                <div class="icon d-flex justify-content-center align-items-center mt-2">
-                    <img alt="service - {{i.id}}" class="w-100 mx-auto" src="/media/{{i.image}}">
-                </div>
-                <div class="content">
-                    <h3 class="my-4">{{i.name}}</h3>
-                    <p>
-                        {{i.description}}
-                    </p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
     </div>
 </section>

@@ -25,7 +25,18 @@
   }
 
 }
-
+@media only screen and (max-width: 992px)
+{
+  .services .container .box{
+    position:relative;
+     box-shadow:var(--box-shadow);
+     width:350px;
+     padding:12px;
+     border-radius:6px;
+     margin:8px;
+     box-sizing: border-box;
+  }
+}
 @media only screen and (max-width: 766px)
 {
   .subscribe-area .subscribe{

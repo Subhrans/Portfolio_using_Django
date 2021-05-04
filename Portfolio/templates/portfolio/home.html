@@ -6,7 +6,15 @@
 {% endblock %}
 {% block owncss %}
 <style>
-
+{% for i in service %}
+.container .box:nth-child({{forloop.counter}}) .icon{
+    box-shadow: 0 0 0 0 {{i.color}};
+    background: {{i.color}} !important;
+}
+.container .box:nth-child({{forloop.counter}}):hover .icon{
+    box-shadow: 0 0 0 400px {{i.color}};
+}
+{% endfor %}
 </style>
 {% endblock %}
 {% block content %}
