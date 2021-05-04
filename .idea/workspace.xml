@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="dynamic links done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/static/portfolio/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -296,13 +298,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00035" summary="remove redundant tables">
-      <created>1617729990327</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1617729990327</updated>
     </task>
     <task id="LOCAL-00036" summary="Contact Backend">
       <created>1617730927319</created>
@@ -640,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620152686679</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="dynamic links done">
+      <created>1620153722560</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1620153722560</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">

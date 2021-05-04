@@ -1,46 +1,46 @@
 {% load static %}
 <section class="services mb-3 pb-3" id="services">
+    <div class="container pb-4">
+        <div class="row">
+            <div class="pb-3">
+                <h1 class="text-uppercase my-5 title-h1">Service Available</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% for i in service %}
+        <div class="box overflow-hidden">
+            <div class="icon">
+                <img alt="service - {{i.id}}" class="w-100 mx-auto" src="/media/{{i.image}}">
+            </div>
+            <div class="content text-center">
+                <h3 class="my-4">{{i.name|capfirst }}</h3>
+                <p>{{i.description}}</p>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
     <div class="container pb-4 my-3">
         <div class="row">
             <div class="pb-3">
                 <h1 class="text-uppercase my-5 title-h1">Service Available</h1>
             </div>
         </div>
-        <div class="row justify-content-between mt-2">
+        <div class="row justify-content-around mt-2">
             {% for i in service %}
-            <div class="box col-md-3 overflow-hidden text-center py-4">
+            <div class="box col-md-4 overflow-hidden text-center">
                 <div class="icon d-flex justify-content-center align-items-center mt-2">
-                    <img src="/media/{{i.image}}" alt="service - {{i.id}}" class="w-100 mx-auto">
+                    <img alt="service - {{i.id}}" class="w-100 mx-auto" src="/media/{{i.image}}">
                 </div>
                 <div class="content">
-                    <h3>{{i.name}}</h3>
+                    <h3 class="my-4">{{i.name}}</h3>
                     <p>
                         {{i.description}}
                     </p>
                 </div>
             </div>
-
-            <!--            <div class="col-sm-6  {% if service.count == 4 %} col-md-6 col-lg-3 justify-content-between d-flex {% else %}col-sm-12 col-md-6 col-lg-4{% endif %} px-sm-5 px-lg-5 px-md-5 mt-4 service-box">-->
-            <!--            <div class="owl-carousel owl-theme">-->
-            <!--                <div class="card border-0" style="width:18rem;">-->
-            <!--                    <div class="img-div mx-auto d-flex text-center icon">-->
-            <!--                        <img src="/media/{{i.image}}" alt="service - {{i.id}}" class="w-75 mx-auto">-->
-            <!--                    </div>-->
-            <!--                    <div class="card-body border-top-0 border content">-->
-            <!--                        <h5 class="card-title">{{i.name}}</h5>-->
-            <!--                        <p class="card-text para">-->
-            <!--                            {{i.description|slice:":90"}}-->
-            <!--                            {% if i.description|length > 90 %}-->
-            <!--                            <br><small><a href="#" class="read-more">Readmore</a></small>-->
-            <!--                            {% endif %}-->
-            <!--                        </p>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                &lt;!&ndash;            <div class="item">&ndash;&gt;-->
-            <!--                &lt;!&ndash;                &ndash;&gt;-->
-            <!--                &lt;!&ndash;                &ndash;&gt;-->
-            <!--                &lt;!&ndash;            </div>&ndash;&gt;-->
-            <!--            </div>-->
             {% endfor %}
         </div>
     </div>

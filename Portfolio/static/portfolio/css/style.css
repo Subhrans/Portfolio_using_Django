@@ -244,12 +244,22 @@ p{
     background:#000;
     margin:0 auto;
     border-radius:50%;
-    font-weight:700;
+    font:normal 700 25px/12px var(--roboto);
     transition:1s;
 }
-.container .box{
+.services .container{
+display:flex;
+flex-wrap:nowrap;
+justify-content:space-between;
+}
+.services .container .box{
+ position:relative;
  box-shadow:var(--box-shadow);
+ width:350px;
+ padding:39px;
  border-radius:6px;
+ margin:20px;
+ box-sizing: border-box;
 }
 .container .box:nth-child(1) .icon{
     box-shadow: 0 0 0 0 #e91e63;
@@ -286,7 +296,7 @@ p{
 .container .box .content{
     position:relative;
     z-index:1;
-    transition:0.5s;
+    transition:0.3s;
     color:#000;
 }
 
