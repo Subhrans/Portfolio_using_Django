@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="service backend complete">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0044_auto_20210505_0118.py" afterDir="false" />
+    <list default="true" id="9346a35d-b013-4a82-b322-629ac870cd7a" name="Default" comment="service admin add section fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/templates/portfolio/services.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio_using_Django/manage.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,13 +299,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608404929505</updated>
-    </task>
-    <task id="LOCAL-00038" summary="MailBackend">
-      <created>1617738524509</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1617738524509</updated>
     </task>
     <task id="LOCAL-00039" summary="profile section add">
       <created>1617818592151</created>
@@ -645,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620157305171</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="service admin add section fixed">
+      <created>1620200273364</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1620200273366</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -676,7 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="search field for project section" />
     <MESSAGE value="added services model and admin" />
     <MESSAGE value="added services into services page" />
     <MESSAGE value="visited modal complete" />
@@ -701,7 +698,8 @@
     <MESSAGE value="dynamic links done" />
     <MESSAGE value="services card done but not responsive" />
     <MESSAGE value="service backend complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="service backend complete" />
+    <MESSAGE value="service admin add section fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="service admin add section fixed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/staticfiles/css/master.css" />

@@ -1,8 +1,8 @@
 from django import forms
 from django.core import validators
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
-from .models import Subscribe, ContactUs, MailBackend
+from .models import Subscribe, ContactUs
 
 
 class SubscribeForm(forms.ModelForm):
@@ -35,12 +35,6 @@ class ContactUsForm(forms.ModelForm):
                 'rows': 5,
             })
         }
-
-
-# class ContactBackendForm(forms.ModelForm):
-#     class Meta:
-#         model = MailBackend
-#         fields = ['user', 'gmail', 'password']
 
 
 class LoginForm(AuthenticationForm):
