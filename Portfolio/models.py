@@ -111,11 +111,15 @@ class Service(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to="images/", null=True, blank=True)
-    color = models.CharField(default="#e91e63",max_length=20,
+    color = models.CharField(default="#e91e63", max_length=20,
                              help_text="Please enter only color codes or name, do not include rgba values",
-                             null=True, blank=True,verbose_name="background color")
+                             null=True, blank=True, verbose_name="background color")
     description = models.TextField(default="", verbose_name="little Description",
+                                   max_length=100,
                                    help_text="Please Add less than 100 characters, else rest of the text automatically hide.")
+
+    class Meta:
+        unique_together = ('user', 'name')
 
     def save(self, *args, **kwargs):
         for field in self._meta.fields:
@@ -123,6 +127,9 @@ class Service(models.Model):
                 field.upload_to = f"images/{self.user}/Services/"
 
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
 
 
 class MyDetail(models.Model):

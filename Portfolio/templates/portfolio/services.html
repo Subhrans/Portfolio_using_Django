@@ -3,18 +3,19 @@
     <div class="container pb-4">
         <div class="row">
             <div class="pb-3">
-                <h1 class="text-uppercase my-5 title-h1">Service Available</h1>
+                <h1 class="text-uppercase mt-5 px-3 title-h1">Services Offers</h1>
+                <h4 class="text-uppercase mb-5 text-info px-5" style="font-style:italic;">24 X 7 Available</h4>
             </div>
         </div>
     </div>
     <div class="container flex-wrap flex-md-nowrap align-content-center flex-column flex-sm-column flex-md-row">
         {% for i in service %}
         <div class="box overflow-hidden">
-            <div class="icon">
+            <div class="icon" style="{% if not i.image %}padding-top: 2rem!important; text-align:center;{% endif %}">
                 {% if i.image %}
                 <img alt="service - {{i.id}}" class="w-100 mx-auto" src="/media/{{i.image}}">
                 {% else %}
-                    0{{i.id}}
+                    0{{forloop.counter}}
                 {% endif %}
             </div>
             <div class="content text-center">

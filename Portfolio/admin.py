@@ -214,8 +214,8 @@ class ServiceAdmin(admin.ModelAdmin):
     list_display = ['user', 'name']
 
     def add_view(self, request, form_url='', extra_context=None):
-        if self.model.objects.count() >= 4:
-            self.message_user(request, 'Only four entries can exist at once - please remove others first',
+        if self.model.objects.filter(user=request.user).count() >= 3:
+            self.message_user(request, 'Only three entries can exist at once - please remove others first',
                               messages.ERROR)
             return HttpResponseRedirect("/admin/Portfolio/service/")
         return super(ServiceAdmin, self).add_view(request, form_url, extra_context)
