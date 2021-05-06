@@ -105,7 +105,7 @@ def contact_us_view(request, userid=1):
                               )
                     cuform.save()
                     messages.success(request, "Mail Query sent successfully")
-                    return HttpResponseRedirect('/contact_us/')
+                    return HttpResponseRedirect('/contact_us/en/')
                 else:
                     send_mail(subject='query',
                               message=msg,
@@ -115,7 +115,7 @@ def contact_us_view(request, userid=1):
                               )
                     cuform.save()
                     messages.success(request, "Mail Query sent successfully")
-                    return HttpResponseRedirect('/' + str(userid) + '/contact_us/')
+                    return HttpResponseRedirect('/' + str(userid) + '/contact_us/en/')
     else:
         cuform = ContactUsForm()
     print("check user", request.user.is_anonymous)
